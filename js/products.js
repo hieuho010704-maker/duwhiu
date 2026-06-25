@@ -383,7 +383,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Cau chuyen
 // ================= BRAND STORY READ MORE =================
-// ================= BRAND STORY READ MORE =================
 document.addEventListener('DOMContentLoaded', function () {
     const readMoreBtn = document.getElementById('brandReadMoreBtn');
     const storyFull = document.getElementById('brandStoryFull');
