@@ -19,36 +19,232 @@
     <!-- Header dùng chung -->
     <div id="header"></div>
 
+
+
+
+
     <!-- Nội dung riêng của từng trang -->
     <main>
-        <section class="payment-page">
-            <div class="container">
-                <h1>Payment</h1>
+        <section class="checkout-section">
+            <div class="container-58">
+                <div class="checkout-wrapper">
 
-                <div class="row">
-                    <div class="col-lg-7">
-                        <form id="paymentForm">
-                            <input type="text" id="fullName" class="form-control mb-3" placeholder="Full name">
-                            <input type="text" id="phone" class="form-control mb-3" placeholder="Phone number">
-                            <input type="text" id="address" class="form-control mb-3" placeholder="Address">
-
-                            <select id="paymentMethod" class="form-control mb-3">
-                                <option value="">Choose payment method</option>
-                                <option value="cod">Cash on Delivery</option>
-                                <option value="bank">Bank Transfer</option>
-                            </select>
-
-                            <button type="submit" class="btn btn-dark">Place Order</button>
-                        </form>
+                    <!-- Breadcrumb -->
+                    <div class="checkout-breadcrumb">
+                        <a href="index.html">Home</a> / <a href="cart.html">Cart</a> / <span>Checkout</span>
                     </div>
 
-                    <div class="col-lg-5">
-                        <div id="orderSummary"></div>
+                    <h1 class="checkout-title">Secure Checkout</h1>
+
+                    <div class="row">
+
+                        <!-- ====== LEFT: FORM ====== -->
+                        <div class="col-lg-7">
+                            <div class="checkout-form">
+
+                                <!-- Step indicator -->
+                                <div class="checkout-steps">
+                                    <div class="step active">
+                                        <span class="step-number">1</span>
+                                        <span class="step-label">Information</span>
+                                    </div>
+                                    <div class="step-line"></div>
+                                    <div class="step">
+                                        <span class="step-number">2</span>
+                                        <span class="step-label">Confirm</span>
+                                    </div>
+                                    <div class="step-line"></div>
+                                    <div class="step">
+                                        <span class="step-number">3</span>
+                                        <span class="step-label">Complete</span>
+                                    </div>
+                                </div>
+
+                                <!-- Error messages -->
+                                <div id="formErrors" class="form-errors" style="display: none;">
+                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                    <span id="errorMessage">Please fix the errors below.</span>
+                                </div>
+
+                                <!-- Form -->
+                                <form id="checkoutForm" novalidate>
+                                    <div class="form-section">
+                                        <h3><i class="fa-regular fa-user"></i> Personal Information</h3>
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label for="fullName" class="form-label">Full Name *</label>
+                                                <input type="text" class="form-control" id="fullName"
+                                                    placeholder="John Doe" required>
+                                                <div class="field-error" id="fullNameError">Please enter your full name
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 mb-3">
+                                                <label for="email" class="form-label">Email *</label>
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="john@example.com" required>
+                                                <div class="field-error" id="emailError">Please enter a valid email
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Phone Number *</label>
+                                            <input type="tel" class="form-control" id="phone"
+                                                placeholder="034 2230 2344" required>
+                                            <div class="field-error" id="phoneError">Please enter a valid phone number
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="address" class="form-label">Delivery Address *</label>
+                                            <input type="text" class="form-control" id="address"
+                                                placeholder="66 Vo Van Tan Street, Da Nang" required>
+                                            <div class="field-error" id="addressError">Please enter your delivery
+                                                address</div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="note" class="form-label">Order Notes</label>
+                                            <textarea class="form-control" id="note" rows="2"
+                                                placeholder="Special delivery instructions..."></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-section">
+                                        <h3><i class="fa-regular fa-credit-card"></i> Payment Method</h3>
+                                        <div class="payment-methods">
+                                            <div class="payment-option" data-payment="cod">
+                                                <input type="radio" name="payment" value="cod" id="cod" checked>
+                                                <label for="cod">
+                                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                                    <span>Cash on Delivery</span>
+                                                    <small>Pay when you receive</small>
+                                                </label>
+                                            </div>
+                                            <div class="payment-option" data-payment="bank">
+                                                <input type="radio" name="payment" value="bank" id="bank">
+                                                <label for="bank">
+                                                    <i class="fa-solid fa-building-columns"></i>
+                                                    <span>Bank Transfer</span>
+                                                    <small>Transfer to our bank account</small>
+                                                </label>
+                                            </div>
+                                            <div class="payment-option" data-payment="momo">
+                                                <input type="radio" name="payment" value="momo" id="momo">
+                                                <label for="momo">
+                                                    <i class="fa-solid fa-wallet"></i>
+                                                    <span>Momo Wallet</span>
+                                                    <small>Pay with Momo app</small>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Confirm & Place Order -->
+                                    <div class="form-actions">
+                                        <div class="terms-check">
+                                            <input type="checkbox" id="termsCheck" required>
+                                            <label for="termsCheck">I agree to the <a href="#">Terms & Conditions</a>
+                                                and <a href="#">Privacy Policy</a></label>
+                                            <div class="field-error" id="termsError">Please agree to the terms</div>
+                                        </div>
+                                        <button type="submit" class="checkout-submit-btn" id="placeOrderBtn">
+                                            <i class="fa-solid fa-lock"></i> Place Order
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- ====== RIGHT: ORDER SUMMARY ====== -->
+                        <div class="col-lg-5">
+                            <div class="checkout-summary" id="orderSummary">
+                                <h3>Your Order</h3>
+                                <div id="orderItems" class="order-items">
+                                    <!-- JS sẽ render -->
+                                </div>
+                                <div class="order-coupon">
+                                    <input type="text" placeholder="Coupon code" id="couponInput">
+                                    <button id="applyCoupon">Apply</button>
+                                </div>
+                                <div class="order-total">
+                                    <div class="total-row">
+                                        <span>Subtotal</span>
+                                        <span id="subtotal">0 VND</span>
+                                    </div>
+                                    <div class="total-row" id="discountRow" style="display: none;">
+                                        <span>Discount</span>
+                                        <span id="discountAmount">-0 VND</span>
+                                    </div>
+                                    <div class="total-row">
+                                        <span>Shipping</span>
+                                        <span id="shipping">Free</span>
+                                    </div>
+                                    <div class="total-row grand-total">
+                                        <span>Total</span>
+                                        <span id="grandTotal">0 VND</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Success Overlay (ẩn ban đầu) -->
+                    <div class="success-overlay" id="successOverlay">
+                        <div class="success-card">
+                            <div class="success-icon">
+                                <i class="fa-solid fa-check-circle"></i>
+                            </div>
+                            <h2>Order Placed Successfully!</h2>
+                            <p>Thank you for shopping with Men's Wear.</p>
+                            <div class="success-actions">
+                                <a href="index.html" class="btn-home">Back to Home</a>
+                                <a href="products.html" class="btn-continue">Continue Shopping</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!-- Confirmation Modal -->
+    <div class="confirm-modal" id="confirmModal">
+        <div class="confirm-modal-content">
+            <button class="confirm-close" id="confirmClose">&times;</button>
+            <h3>📋 Confirm Your Order</h3>
+            <div class="confirm-body">
+                <div class="confirm-section">
+                    <h4>Shipping Information</h4>
+                    <p id="confirmName">-</p>
+                    <p id="confirmEmail">-</p>
+                    <p id="confirmPhone">-</p>
+                    <p id="confirmAddress">-</p>
+                </div>
+                <div class="confirm-section">
+                    <h4>Payment Method</h4>
+                    <p id="confirmPayment">-</p>
+                </div>
+                <div class="confirm-section">
+                    <h4>Order Summary</h4>
+                    <div id="confirmItems"></div>
+                    <div class="confirm-total">
+                        <span>Total:</span>
+                        <span id="confirmTotal">0 VND</span>
+                    </div>
+                </div>
+                <button class="confirm-btn" id="confirmOrderBtn">✅ Confirm & Place Order</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
 
     <!-- Footer dùng chung -->
     <div id="footer"></div>

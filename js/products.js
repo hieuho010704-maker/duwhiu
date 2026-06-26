@@ -1,10 +1,11 @@
 import products from "./products-data.js";
 
 // ================= PAGINATION CONFIG =================
-const ITEMS_PER_PAGE = 8;    // Số sản phẩm mỗi trang
-let currentPage = 1;         // Trang hiện tại
-let totalPages = 1;          // Tổng số trang
-let filteredProductsCache = []; // Lưu kết quả lọc để phân trang
+const ITEMS_PER_PAGE = 8;
+let currentPage = 1;
+let totalPages = 1;
+let filteredProductsCache = [];
+
 // ================= UTILITY =================
 function formatPrice(price) {
     return price.toLocaleString("vi-VN") + " VND";
@@ -28,7 +29,6 @@ function getFilteredProducts() {
     const size = getUrlParam("size");
     const color = getUrlParam("color");
 
-    // Helper: filter by multi-value (comma separated)
     function filterByMulti(param, field, isArray = false) {
         if (!param) return;
         const values = param.split(',').map(v => v.trim());
@@ -42,12 +42,10 @@ function getFilteredProducts() {
         });
     }
 
-    // Apply filters
     if (category) filterByMulti(category, 'category');
     if (brand) filterByMulti(brand, 'brand');
     if (sub) filterByMulti(sub, 'subCategory');
 
-    // Filter by Special badges (New, Sale, Best Seller)
     if (filter) {
         const filters = filter.split(',').map(f => f.trim());
         const badgeMap = {
@@ -127,50 +125,38 @@ function renderProducts() {
     const paginationContainer = document.getElementById("paginationControls");
     if (!container) return;
 
-    // 1. Lấy danh sách đã lọc (dữ liệu gốc)
     const filtered = getFilteredProducts();
-    filteredProductsCache = filtered; // Lưu lại để dùng cho phân trang
+    filteredProductsCache = filtered;
 
-    // 2. Tính tổng số trang
     totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
     if (totalPages === 0) totalPages = 1;
 
-    // 3. Đảm bảo currentPage hợp lệ (nếu bị vượt quá)
     if (currentPage > totalPages) currentPage = totalPages;
 
-    // 4. Lấy sản phẩm của trang hiện tại
     const start = (currentPage - 1) * ITEMS_PER_PAGE;
     const end = Math.min(start + ITEMS_PER_PAGE, filtered.length);
     const pageProducts = filtered.slice(start, end);
 
-    // 5. Cập nhật số lượng sản phẩm
     if (countSpan) {
         countSpan.textContent = filtered.length;
-        // Hiển thị thêm thông tin trang (tùy chọn)
         const infoEl = document.getElementById("productCount");
         if (infoEl) {
             infoEl.innerHTML = `Showing <strong>${start + 1}–${end}</strong> of <strong>${filtered.length}</strong> products`;
         }
     }
 
-    // 6. Render sản phẩm của trang hiện tại
     if (pageProducts.length === 0) {
         container.innerHTML = `<div class="col-12"><p class="no-products">No products found.</p></div>`;
     } else {
         container.innerHTML = pageProducts.map(p => createProductCard(p)).join("");
     }
 
-    // 7. Render các nút phân trang
     renderPagination(totalPages, currentPage, paginationContainer);
 }
 
-
-
-// tạo nút trang
 function renderPagination(total, current, container) {
     if (!container) return;
 
-    // Nếu chỉ có 1 trang hoặc không có sản phẩm thì ẩn phân trang
     if (total <= 1 || filteredProductsCache.length === 0) {
         container.innerHTML = '';
         return;
@@ -178,13 +164,11 @@ function renderPagination(total, current, container) {
 
     let html = `<ul class="pagination">`;
 
-    // Nút Previous
     const prevDisabled = current === 1 ? 'disabled' : '';
     html += `<li class="page-item ${prevDisabled}">
                 <a class="page-link" href="#" data-page="${current - 1}" tabindex="-1">Previous</a>
              </li>`;
 
-    // Các số trang
     for (let i = 1; i <= total; i++) {
         const active = i === current ? 'active' : '';
         html += `<li class="page-item ${active}">
@@ -192,7 +176,6 @@ function renderPagination(total, current, container) {
                  </li>`;
     }
 
-    // Nút Next
     const nextDisabled = current === total ? 'disabled' : '';
     html += `<li class="page-item ${nextDisabled}">
                 <a class="page-link" href="#" data-page="${current + 1}">Next</a>
@@ -201,18 +184,16 @@ function renderPagination(total, current, container) {
     html += `</ul>`;
     container.innerHTML = html;
 
-    // Gắn sự kiện click cho từng nút
     container.querySelectorAll('.page-link').forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
             const page = parseInt(this.dataset.page);
             if (isNaN(page) || page < 1 || page > total) return;
-            if (page === current) return; // Không làm gì nếu cùng trang
+            if (page === current) return;
 
             currentPage = page;
-            renderProducts(); // Gọi lại render để hiển thị trang mới
+            renderProducts();
 
-            // Cuộn lên đầu danh sách sản phẩm
             const section = document.querySelector('.products-section');
             if (section) {
                 section.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -221,17 +202,8 @@ function renderPagination(total, current, container) {
     });
 }
 
+// ================= MULTI-FILTER LOGIC =================
 
-
-
-
-
-
-
-
-// ================= MULTI-FILTER LOGIC (CHECKBOX + RADIO) =================
-
-// Price: only one selected at a time
 document.querySelectorAll('.price-checkbox').forEach(function (cb) {
     cb.addEventListener('change', function () {
         if (this.checked) {
@@ -245,9 +217,7 @@ document.querySelectorAll('.price-checkbox').forEach(function (cb) {
 
 function applyFilters() {
     const params = new URLSearchParams();
-     currentPage = 1; // 👈 Reset về trang 1
-    renderProducts();
-    // Checkboxes (multiple)
+
     const checkedBoxes = document.querySelectorAll('.filter-checkbox:checked');
     const filterMap = {};
     checkedBoxes.forEach(cb => {
@@ -260,7 +230,6 @@ function applyFilters() {
         params.set(key, filterMap[key].join(','));
     });
 
-    // Price (only one)
     const priceChecked = document.querySelector('.price-checkbox:checked');
     if (priceChecked) {
         params.set(priceChecked.dataset.filter, priceChecked.value);
@@ -268,51 +237,46 @@ function applyFilters() {
 
     const newUrl = window.location.pathname + (params.toString() ? '?' + params.toString() : '');
     window.history.pushState({}, '', newUrl);
+
+    currentPage = 1;
     renderProducts();
 }
 
-// Listen to changes on common checkboxes
 document.addEventListener('change', function (e) {
     if (e.target.matches('.filter-checkbox')) {
         applyFilters();
     }
 });
 
-// Clear all
 document.getElementById('clearFiltersBtn')?.addEventListener('click', function () {
     document.querySelectorAll('.filter-checkbox, .price-checkbox').forEach(el => el.checked = false);
     window.history.pushState({}, '', window.location.pathname);
+    currentPage = 1;
     renderProducts();
 });
 
-// ================= APPLY FILTER WITH CATEGORY (NO RELOAD) =================
+// ================= APPLY FILTER WITH CATEGORY =================
 function applyFilterWithCategory(category) {
-    // 1. Cập nhật URL param
     const params = new URLSearchParams(window.location.search);
-     currentPage = 1; // 👈 Reset về trang 1
-    renderProducts();
     params.set('category', category);
     const newUrl = window.location.pathname + '?' + params.toString();
     window.history.pushState({}, '', newUrl);
 
-    // 2. Cập nhật UI: tích checkbox category tương ứng, bỏ chọn các category khác
     document.querySelectorAll('.filter-checkbox[data-filter="category"]').forEach(cb => {
         cb.checked = (cb.value === category);
     });
 
-    // 3. Gọi render để cập nhật sản phẩm
+    currentPage = 1;
     renderProducts();
 
-    // 4. Tự động scroll đến danh sách sản phẩm
     const productSection = document.querySelector('.products-section');
     if (productSection) {
         productSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 }
 
-// ================= HANDLE SLIDER & CATEGORY NAV BUTTONS =================
+// ================= HANDLE SLIDER & CATEGORY NAV =================
 document.addEventListener('DOMContentLoaded', function () {
-    // ---- Xử lý các nút "Shop ..." trong slider ----
     document.querySelectorAll('.slider-link-btn').forEach(function (btn) {
         btn.addEventListener('click', function (e) {
             e.preventDefault();
@@ -323,7 +287,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // ---- Xử lý các icon điều hướng (Tops, Bottoms, Shoes, Accessory) ----
     document.querySelectorAll('.category-nav-card').forEach(function (card) {
         card.addEventListener('click', function (e) {
             e.preventDefault();
@@ -332,10 +295,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const targetId = href.substring(1);
                 const targetElement = document.getElementById(targetId);
                 if (targetElement) {
-                    // Nếu có section, scroll đến đó
                     targetElement.scrollIntoView({ behavior: 'smooth' });
                 } else {
-                    // Nếu không có section, dùng data-category để filter (nếu có)
                     const category = this.dataset.category || targetId;
                     if (category) {
                         applyFilterWithCategory(category);
@@ -348,7 +309,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ================= SYNC UI WITH URL ON LOAD =================
 document.addEventListener('DOMContentLoaded', function () {
-    const params = new URLSearchParams(window.location.search);s
+    const params = new URLSearchParams(window.location.search);
     document.querySelectorAll('.filter-checkbox, .price-checkbox').forEach(el => {
         const key = el.dataset.filter;
         const val = el.value;
@@ -359,16 +320,13 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-    // Trigger initial render
     renderProducts();
 });
 
-// Silde chạy
+// ================= SLIDER AUTO PLAY =================
 document.addEventListener('DOMContentLoaded', function () {
     const slider = document.getElementById('productCategorySlider');
     if (slider) {
-        // Nếu đã có data-bs-ride, không cần khởi tạo lại, nhưng vẫn có thể
-        // kiểm tra và khởi tạo nếu chưa
         if (!bootstrap.Carousel.getInstance(slider)) {
             new bootstrap.Carousel(slider, {
                 interval: 3500,
@@ -380,29 +338,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
-// Cau chuyen
-// ================= BRAND STORY READ MORE =================
+// ================= BRAND STORY TOGGLE =================
 document.addEventListener('DOMContentLoaded', function () {
-    const readMoreBtn = document.getElementById('brandReadMoreBtn');
-    const storyFull = document.getElementById('brandStoryFull');
-    const btnText = document.getElementById('brandBtnText');
-    const btnIcon = document.getElementById('brandBtnIcon');
+    const btn = document.getElementById('storyToggle');
+    const full = document.getElementById('storyFull');
+    const text = document.getElementById('storyBtnText');
+    const icon = document.getElementById('storyBtnIcon');
 
-    if (readMoreBtn && storyFull) {
-        readMoreBtn.addEventListener('click', function (e) {
-            e.preventDefault();
-            const isOpen = storyFull.classList.contains('visible');
-            if (isOpen) {
-                storyFull.classList.remove('visible');
-                btnText.textContent = 'Read More';
-                this.classList.remove('open');
-                if (btnIcon) btnIcon.style.transform = 'rotate(0deg)';
-            } else {
-                storyFull.classList.add('visible');
-                btnText.textContent = 'Read Less';
-                this.classList.add('open');
-                if (btnIcon) btnIcon.style.transform = 'rotate(180deg)';
+    if (btn && full) {
+        btn.addEventListener('click', function () {
+            const isOpen = full.style.display === 'block';
+            full.style.display = isOpen ? 'none' : 'block';
+            text.textContent = isOpen ? 'Read More' : 'Read Less';
+            this.classList.toggle('open');
+            if (icon) {
+                icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
             }
         });
     }

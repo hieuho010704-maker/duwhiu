@@ -25,22 +25,23 @@ function createHeader() {
                         </div>
 
                         <div class="header-actions">
+                            <a href="orders.html" class="header-icon tooltip-item" data-tooltip="Orders">
+                                <i class="fa-solid fa-receipt"></i>
+                            </a>
                             <a href="#" class="header-icon tooltip-item" data-tooltip="Wishlist">
                                 <i class="fa-regular fa-heart"></i>
                             </a>
 
-                            <a href="cart.html" class="header-icon cart-icon tooltip-item" data-tooltip="Cart">
+                            <!-- CART ICON - MỞ MINI CART -->
+                            <a href="#" class="header-icon cart-icon tooltip-item" id="cartToggle" data-tooltip="Cart">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span id="cartCount">0</span>
                             </a>
 
                             <a href="login.html" class="header-icon tooltip-item" data-tooltip="Account">
                                 <i class="fa-solid fa-circle-user"></i>
-
                             </a>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -100,13 +101,11 @@ function createHeader() {
                             </div>
 
                             <div class="mega-image-wrapper">
-
-                            <div class="mega-image-box">
+                                <div class="mega-image-box">
                                     <div class="product-menu-slider two-images">
                                         <img src="assets/images/product/calvin/ck-reversible-leather-belt-4.webp" alt="New Collection 1">
                                         <img src="assets/images/product/calvin/ck-campus-backpack-2.webp" alt="New Collection 2">
                                     </div>
-
                                     <div class="mega-image-content">
                                         <h3>New Collection</h3>
                                         <a href="products.html?filter=new">Shop Now</a>
@@ -118,16 +117,12 @@ function createHeader() {
                                         <img src="assets/images/product/nike/nike-lebron-20-1.webp" alt="Sport Style 1">
                                         <img src="assets/images/product/nike/nike-air-max-90-2.webp" alt="Sport Style 2">
                                     </div>
-
                                     <div class="mega-image-content">
                                         <h3>Sport Style</h3>
                                         <a href="products.html?category=footwear">Shop Now</a>
                                     </div>
                                 </div>
-
                             </div>
-
-
                         </div>
                     </li>
 
@@ -138,38 +133,35 @@ function createHeader() {
 
                         <div class="mega-menu brand-mega-menu">
                             <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i>    SPORT BRANDS</h3>
-                                <a href="brand-detail.html?brand=Aidas">Adidas</a>
-                                <a href="brand-detail.html?brand=Nke">Nike</a>
+                                <h3><i class="fa-solid fa-tags"></i> SPORT BRANDS</h3>
+                                <a href="brand-detail.html?brand=Adidas">Adidas</a>
+                                <a href="brand-detail.html?brand=Nike">Nike</a>
                             </div>
 
                             <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i>    LUXURY BRANDS</h3>
+                                <h3><i class="fa-solid fa-tags"></i> LUXURY BRANDS</h3>
                                 <a href="brand-detail.html?brand=Gucci">Gucci</a>
                                 <a href="brand-detail.html?brand=Calvin Klein">Calvin Klein</a>
                             </div>
 
                             <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i>    CASUAL BRANDS</h3>
+                                <h3><i class="fa-solid fa-tags"></i> CASUAL BRANDS</h3>
                                 <a href="brand-detail.html?brand=Levi's">Levi's</a>
-                                <a href="brand-detail.html?brand=Tommy">Tommy Hilfiger</a>
+                                <a href="brand-detail.html?brand=Tommy Hilfiger">Tommy Hilfiger</a>
                             </div>
 
                             <div class="brand-image-box">
                                 <div class="brand-slider three-images">
                                     <img src="assets/images/brand/adidas.jpg" alt="Brands Adidas">
-                                    <img src="assets/images/brand/tomny.jpg" alt="Brands Tommy">
+                                    <img src="assets/images/brand/tommy.jpg" alt="Brands Tommy">
                                     <img src="assets/images/brand/nike.webp" alt="Brands Nike">
                                  </div>
-
                                 <div class="brand-image-content">
                                     <h3>Top Brands</h3>
                                     <a href="brand.html">View All Brands</a>
                                 </div>
                             </div>
-                            
                         </div>
-                        
                     </li>
 
                     <li>
@@ -178,6 +170,31 @@ function createHeader() {
                 </ul>
             </nav>
         </header>
+
+        <!-- ===== MINI CART SIDEBAR ===== -->
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="mini-cart" id="miniCart">
+            <div class="mini-cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="mini-cart-close" id="cartClose">&times;</button>
+            </div>
+            <div class="mini-cart-body" id="miniCartBody">
+                <!-- Cart items will be rendered here -->
+                <div class="mini-cart-empty">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <p>Your cart is empty.</p>
+                    <a href="products.html" class="continue-shopping-btn">Continue Shopping</a>
+                </div>
+            </div>
+            <div class="mini-cart-footer" id="miniCartFooter" style="display: none;">
+                <div class="mini-cart-total">
+                    <span>Total:</span>
+                    <span id="miniCartTotal">0 VND</span>
+                </div>
+                <a href="cart.html" class="view-cart-btn">View Cart</a>
+                <a href="checkout.html" class="checkout-btn">Checkout</a>
+            </div>
+        </div>
     `;
 }
 
@@ -199,20 +216,16 @@ function createFooter() {
                             <a href="#" class="social-icon facebook" title="Facebook">
                                 <i class="fa-brands fa-facebook-f"></i>
                             </a>
-
                             <a href="#" class="social-icon instagram" title="Instagram">
                                 <i class="fa-brands fa-instagram"></i>
                             </a>
-
                             <a href="#" class="social-icon tiktok" title="TikTok">
                                 <i class="fa-brands fa-tiktok"></i>
                             </a>
-
                             <a href="#" class="social-icon linkedin" title="LinkedIn">
                                 <i class="fa-brands fa-linkedin-in"></i>
                             </a>
                         </div>
-
                     </div>
 
                     <div class="col-lg-2 col-md-6 footer-column">
@@ -237,13 +250,11 @@ function createFooter() {
 
                     <div class="col-lg-2 col-md-6 footer-column footer-payment">
                         <h4>Payment Methods</h4>
-
                         <div class="payment-icons">
                             <span><i class="fa-solid fa-money-bill-wave"></i> COD</span>
                             <span><i class="fa-brands fa-cc-visa"></i> Visa</span>
                             <span><i class="fa-solid fa-wallet"></i> Momo</span>
                             <span><i class="fa-solid fa-qrcode"></i> ZaloPay</span>
-                            
                         </div>
                     </div>
 
@@ -253,7 +264,6 @@ function createFooter() {
                         <p><i class="fa-solid fa-square-phone"></i> <b> Call center CSKH: </b> 034 2230 2344</p>
                         <p><i class="fa-solid fa-square-envelope"></i> <b>LH Email:</b> cskh.support.mens@menswear.com</p>
                     </div>
-
                 </div>
 
                 <div class="footer-bottom">

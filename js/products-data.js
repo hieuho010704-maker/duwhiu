@@ -747,9 +747,11 @@ const products = [
         image: "assets/images/product/levis/levis-511-slim-jeans-4.webp",
         gallery: [
             "assets/images/product/levis/levis-511-slim-jeans-1.webp",
+            "assets/images/product/levis/levis-511-slim-jeans-1.webp",
             "assets/images/product/levis/levis-511-slim-jeans-2.webp",
             "assets/images/product/levis/levis-511-slim-jeans-3.webp",
-            "assets/images/product/levis/levis-511-slim-jeans-4.webp"
+            "assets/images/product/levis/levis-511-slim-jeans-4.webp",
+            
         ],
         description: "A modern slim with room to move. The 511 Slim Fit Jeans are a classic since right now, designed to look good with everything."
     },
