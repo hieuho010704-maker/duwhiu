@@ -4084,3 +4084,43 @@
         margin-top: 40px;
     }
 }
+
+
+/* ================= CHECKOUT ICON COLORS ================= */
+/* Section Titles */
+.form-section h3 i {
+    color: #b8860b; /* Luxury Gold */
+    margin-right: 8px;
+}
+
+/* Payment Method Icons */
+.payment-option label[for="cod"] i {
+    color: #15803d; /* Cash Green */
+}
+
+.payment-option label[for="bank"] i {
+    color: #1e3a8a; /* Navy Bank Blue */
+}
+
+.payment-option label[for="momo"] i {
+    color: #ae2070; /* Momo Pink */
+}
+
+/* Secure Checkout & Place Order Locks */
+#placeOrderBtn i, 
+.secure-checkout i.fa-lock {
+    color: #b8860b; /* Luxury Gold */
+}
+
+/* International Card Brands */
+.fa-cc-visa {
+    color: #1434CB !important;
+}
+
+.fa-cc-mastercard {
+    color: #FF5F00 !important;
+}
+
+.fa-cc-paypal {
+    color: #003087 !important;
+}

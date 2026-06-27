@@ -195,8 +195,7 @@ function createHeader() {
                     <span>Total:</span>
                     <span id="miniCartTotal">0 VND</span>
                 </div>
-                <a href="cart.html" class="view-cart-btn">View Cart</a>
-                <a href="payment.html" class="checkout-btn">Checkout</a>
+                <a href="cart.html" class="checkout-btn">Review Bag & Checkout</a>
             </div>
         </div>
     `;

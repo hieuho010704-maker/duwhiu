@@ -43,23 +43,7 @@
                         <div class="col-lg-7">
                             <div class="checkout-form">
 
-                                <!-- Step indicator -->
-                                <div class="checkout-steps">
-                                    <div class="step active">
-                                        <span class="step-number">1</span>
-                                        <span class="step-label">Information</span>
-                                    </div>
-                                    <div class="step-line"></div>
-                                    <div class="step">
-                                        <span class="step-number">2</span>
-                                        <span class="step-label">Confirm</span>
-                                    </div>
-                                    <div class="step-line"></div>
-                                    <div class="step">
-                                        <span class="step-number">3</span>
-                                        <span class="step-label">Complete</span>
-                                    </div>
-                                </div>
+
 
                                 <!-- Error messages -->
                                 <div id="formErrors" class="form-errors" style="display: none;">
@@ -161,10 +145,7 @@
                                 <div id="orderItems" class="order-items">
                                     <!-- JS sẽ render -->
                                 </div>
-                                <div class="order-coupon">
-                                    <input type="text" placeholder="Coupon code" id="couponInput">
-                                    <button id="applyCoupon">Apply</button>
-                                </div>
+
                                 <div class="order-total">
                                     <div class="total-row">
                                         <span>Subtotal</span>
@@ -207,35 +188,7 @@
         </section>
     </main>
 
-    <!-- Confirmation Modal -->
-    <div class="confirm-modal" id="confirmModal">
-        <div class="confirm-modal-content">
-            <button class="confirm-close" id="confirmClose">&times;</button>
-            <h3>📋 Confirm Your Order</h3>
-            <div class="confirm-body">
-                <div class="confirm-section">
-                    <h4>Shipping Information</h4>
-                    <p id="confirmName">-</p>
-                    <p id="confirmEmail">-</p>
-                    <p id="confirmPhone">-</p>
-                    <p id="confirmAddress">-</p>
-                </div>
-                <div class="confirm-section">
-                    <h4>Payment Method</h4>
-                    <p id="confirmPayment">-</p>
-                </div>
-                <div class="confirm-section">
-                    <h4>Order Summary</h4>
-                    <div id="confirmItems"></div>
-                    <div class="confirm-total">
-                        <span>Total:</span>
-                        <span id="confirmTotal">0 VND</span>
-                    </div>
-                </div>
-                <button class="confirm-btn" id="confirmOrderBtn">✅ Confirm & Place Order</button>
-            </div>
-        </div>
-    </div>
+
 
 
 
