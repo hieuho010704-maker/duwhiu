@@ -16,8 +16,9 @@ const products = [
         featured: true, // Signature Product #1
         colors: ["Black", "White", "Blue"],
         sizes: ["S", "M", "L", "XL"],
-        image: "assets/images/product/adidas/adidas-tshirt-1.webp",
+        image: "assets/images/product/adidas/adidas-tshirt-2.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-tshirt-1.webp",
             "assets/images/product/adidas/adidas-tshirt-1.webp",
             "assets/images/product/adidas/adidas-tshirt-2.webp",
             "assets/images/product/adidas/adidas-tshirt-3.webp",
@@ -37,10 +38,11 @@ const products = [
         rating: 4.7,
         stock: 18,
         featured: false,
-        colors: ["Black", "White", "Blue"],
+        colors: ["Black", "Blue"],
         sizes: ["S", "M", "L", "XL"],
         image: "assets/images/product/adidas/adidas-essentials-tshirt-1.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-essentials-tshirt-1.webp",
             "assets/images/product/adidas/adidas-essentials-tshirt-1.webp",
             "assets/images/product/adidas/adidas-essentials-tshirt-2.webp"
         ],
@@ -64,6 +66,7 @@ const products = [
         image: "assets/images/product/adidas/adidas-polo-1.webp",
         gallery: [
             "assets/images/product/adidas/adidas-polo-1.webp",
+            "assets/images/product/adidas/adidas-polo-1.webp",
             "assets/images/product/adidas/adidas-polo-2.webp",
             "assets/images/product/adidas/adidas-polo-3.webp"
         ],
@@ -84,8 +87,9 @@ const products = [
         featured: false,
         colors: ["Black", "White", "Blue"],
         sizes: ["S", "M", "L", "XL"],
-        image: "assets/images/product/adidas/adidas-hoodie-1.webp",
+        image: "assets/images/product/adidas/adidas-hoodie-3.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-hoodie-1.webp",
             "assets/images/product/adidas/adidas-hoodie-1.webp",
             "assets/images/product/adidas/adidas-hoodie-2.webp",
             "assets/images/product/adidas/adidas-hoodie-3.webp"
@@ -105,12 +109,13 @@ const products = [
         rating: 4.9,
         stock: 10,
         featured: true, // Signature Product #2
-        colors: ["Black", "White", "Blue"],
+        colors: ["Black", "White",],
         sizes: ["S", "M", "L", "XL"],
         image: "assets/images/product/adidas/adidas-sports-jacket-1.webp",
         gallery: [
             "assets/images/product/adidas/adidas-sports-jacket-1.webp",
-            "assets/images/product/adidas/adidas-sports-jacket-2.webp"
+            "assets/images/product/adidas/adidas-sports-jacket-1.webp",
+            "assets/images/product/adidas/adidas-sports-jacket-3.webp"
         ],
         description: "Athletic jacket offering weather protection and modern sportswear styling."
     },
@@ -129,10 +134,11 @@ const products = [
         rating: 4.7,
         stock: 25,
         featured: false,
-        colors: ["Black", "Navy", "White"],
+        colors: ["Black", "Blue", "White"],
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/adidas/adidas-training-pants-1.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-training-pants-1.webp",
             "assets/images/product/adidas/adidas-training-pants-1.webp",
             "assets/images/product/adidas/adidas-training-pants-2.webp",
             "assets/images/product/adidas/adidas-training-pants-3.webp"
@@ -154,8 +160,9 @@ const products = [
         featured: false,
         colors: ["Black", "Navy", "Grey"],
         sizes: ["29", "30", "31", "32", "34"],
-        image: "assets/images/product/adidas/adidas-joggers-2.webp",
+        image: "assets/images/product/adidas/adidas-joggers-1.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-joggers-1.webp",
             "assets/images/product/adidas/adidas-joggers-1.webp",
             "assets/images/product/adidas/adidas-joggers-2.webp",
             "assets/images/product/adidas/adidas-joggers-3.webp"
@@ -177,8 +184,9 @@ const products = [
         featured: false,
         colors: ["Black", "Blue", "Grey"],
         sizes: ["29", "30", "31", "32", "34"],
-        image: "assets/images/product/adidas/adidas-woven-shorts-1.webp",
+        image: "assets/images/product/adidas/adidas-woven-shorts-2.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-woven-shorts-1.webp",
             "assets/images/product/adidas/adidas-woven-shorts-1.webp",
             "assets/images/product/adidas/adidas-woven-shorts-2.webp",
             "assets/images/product/adidas/adidas-woven-shorts-3.webp"
@@ -203,6 +211,8 @@ const products = [
         image: "assets/images/product/adidas/adidas-training-shorts-1.webp",
         gallery: [
             "assets/images/product/adidas/adidas-training-shorts-1.webp",
+            "assets/images/product/adidas/adidas-training-shorts-1.webp",
+
             "assets/images/product/adidas/adidas-training-shorts-2.webp"
         ],
         description: "Durable and performance-driven training shorts for various fitness exercises."
@@ -220,10 +230,11 @@ const products = [
         rating: 4.6,
         stock: 22,
         featured: false,
-        colors: ["Black", "Navy", "Khaki"],
+        colors: ["Navy", "Khaki"],
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/adidas/adidas-sweatpants-1.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-sweatpants-1.webp",
             "assets/images/product/adidas/adidas-sweatpants-1.webp",
             "assets/images/product/adidas/adidas-sweatpants-2.webp"
         ],
@@ -244,10 +255,11 @@ const products = [
         rating: 4.9,
         stock: 15,
         featured: false,
-        colors: ["Black", "White"],
+        colors: ["Black", "Grey"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/adidas/adidas-running-sneakers-1.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-running-sneakers-1.webp",
             "assets/images/product/adidas/adidas-running-sneakers-1.webp",
             "assets/images/product/adidas/adidas-running-sneakers-2.webp"
         ],
@@ -271,7 +283,8 @@ const products = [
         image: "assets/images/product/adidas/adidas-training-sneakers-1.webp",
         gallery: [
             "assets/images/product/adidas/adidas-training-sneakers-1.webp",
-            "assets/images/product/adidas/adidas-training-sneakers-2.webp",
+            "assets/images/product/adidas/adidas-training-sneakers-1.webp",
+            "assets/images/product/adidas/adidas-training-sneakers-2.webp"
         ],
         description: "Stable and supportive sneakers built for gym workouts and cross-training activities."
     },
@@ -292,6 +305,7 @@ const products = [
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/adidas/adidas-lifestyle-sneakers-1.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-lifestyle-sneakers-1.webp",
             "assets/images/product/adidas/adidas-lifestyle-sneakers-1.webp",
             "assets/images/product/adidas/adidas-lifestyle-sneakers-2.webp",
         ],
@@ -317,6 +331,7 @@ const products = [
         image: "assets/images/product/adidas/adidas-backpack-3.webp",
         gallery: [
             "assets/images/product/adidas/adidas-backpack-1.webp",
+            "assets/images/product/adidas/adidas-backpack-1.webp",
             "assets/images/product/adidas/adidas-backpack-2.webp",
             "assets/images/product/adidas/adidas-backpack-3.webp",
         ],
@@ -335,10 +350,11 @@ const products = [
         rating: 4.7,
         stock: 50,
         featured: false,
-        colors: ["Black"],
+        colors: ["Navy", "Blue", "Grey"],
         sizes: [], // Phụ kiện rỗng size
         image: "assets/images/product/adidas/adidas-cap-1.webp",
         gallery: [
+            "assets/images/product/adidas/adidas-cap-1.webp",
             "assets/images/product/adidas/adidas-cap-1.webp",
             "assets/images/product/adidas/adidas-cap-2.webp",
             "assets/images/product/adidas/adidas-cap-3.webp"
@@ -365,10 +381,11 @@ const products = [
         rating: 4.8,
         stock: 12,
         featured: false,
-        colors: ["Black", "White"],
+        colors: ["White"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/nike/nike-lebron-20-1.webp",
         gallery: [
+            "assets/images/product/nike/nike-lebron-20-1.webp",
             "assets/images/product/nike/nike-lebron-20-1.webp",
             "assets/images/product/nike/nike-lebron-20-2.webp",
             "assets/images/product/nike/nike-lebron-20-3.webp",
@@ -377,27 +394,29 @@ const products = [
     },
     {
         id: 17,
-        slug: "nike-dunk-low-retro",
-        name: "Nike Dunk Low Retro",
+        slug: "nike-zoom-freak-4",
+        name: "Nike Zoom Freak 4",
         brand: "Nike",
         category: "footwear",
         subCategory: "sneakers",
-        price: 2850000,
-        oldPrice: 3200000,
-        badge: "New",
-        rating: 4.8,
-        stock: 20,
+        price: 3800000,
+        oldPrice: 4500000,
+        badge: "Sale",
+        rating: 4.7,
+        stock: 18,
         featured: false,
-        colors: ["Navy", "Grey"],
+        colors: ["Black", "White"],
         sizes: ["39", "40", "41", "42", "43"],
-        image: "assets/images/product/nike/nike-dunk-low-retro-3.webp",
+        image: "assets/images/product/nike/nike-zoom-freak-4-3.webp",
         gallery: [
-            "assets/images/product/nike/nike-dunk-low-retro-1.webp",
-            "assets/images/product/nike/nike-dunk-low-rretro3.webp",
-            "assets/images/product/nike/nike-dunk-low-retro-3.webp",
+            "assets/images/product/nike/nike-zoom-freak-4-1.webp",
+            "assets/images/product/nike/nike-zoom-freak-4-1.webp",
+            "assets/images/product/nike/nike-zoom-freak-4-2.webp",
+            "assets/images/product/nike/nike-zoom-freak-4-3.webp",
         ],
-        description: "Created for the hardwood but taken to the streets, the '80s b-ball icon returns with classic details and throwback hoops flair."
+        description: "Giannis Antetokounmpo's signature shoe is engineered with multi-directional traction to help you drive to the rim with power."
     },
+
     {
         id: 18,
         slug: "nike-air-max-90",
@@ -411,10 +430,11 @@ const products = [
         rating: 4.7,
         stock: 15,
         featured: false,
-        colors: ["Black", "White"],
+        colors: ["Khaki", "Blue", "Green"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/nike/nike-air-max-90-2.webp",
         gallery: [
+            "assets/images/product/nike/nike-air-max-90-1.webp",
             "assets/images/product/nike/nike-air-max-90-1.webp",
             "assets/images/product/nike/nike-air-max-90-2.webp",
             "assets/images/product/nike/nike-air-max-90-3.webp"
@@ -434,10 +454,11 @@ const products = [
         rating: 4.8,
         stock: 10,
         featured: false,
-        colors: ["Black", "White"],
+        colors: ["Red", "Khaki", "White"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/nike/nike-air-max-270-2.webp",
         gallery: [
+            "assets/images/product/nike/nike-air-max-270-1.webp",
             "assets/images/product/nike/nike-air-max-270-1.webp",
             "assets/images/product/nike/nike-air-max-270-2.webp",
             "assets/images/product/nike/nike-air-max-270-3.webp"
@@ -462,6 +483,7 @@ const products = [
         image: "assets/images/product/nike/nike-air-zoom-pegasus-40-1.webp",
         gallery: [
             "assets/images/product/nike/nike-air-zoom-pegasus-40-2.webp",
+            "assets/images/product/nike/nike-air-zoom-pegasus-40-2.webp",
             "assets/images/product/nike/nike-air-zoom-pegasus-40-1.webp"
         ],
         description: "A springy ride for every run. The Peg's familiar, just-for-you feel returns to help you accomplish your goals with highly responsive Zoom Air."
@@ -479,10 +501,11 @@ const products = [
         rating: 5.0,
         stock: 5,
         featured: false,
-        colors: ["Black", "White"],
+        colors: ["Pink", "White"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/nike/nike-zoomx-vaporfly-next-3-2.webp",
         gallery: [
+            "assets/images/product/nike/nike-zoomx-vaporfly-next-3-1.webp",
             "assets/images/product/nike/nike-zoomx-vaporfly-next-3-1.webp",
             "assets/images/product/nike/nike-zoomx-vaporfly-next-3-2.webp",
         ],
@@ -501,10 +524,11 @@ const products = [
         rating: 4.5,
         stock: 50,
         featured: false,
-        colors: ["Black", "White", "khaki"],
+        colors: ["Black", "White", "Khaki"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/nike/nike-revolution-6-2.webp",
         gallery: [
+            "assets/images/product/nike/nike-revolution-6-1.webp",
             "assets/images/product/nike/nike-revolution-6-1.webp",
             "assets/images/product/nike/nike-revolution-6-2.webp",
             "assets/images/product/nike/nike-revolution-6-3.webp"
@@ -529,6 +553,7 @@ const products = [
         image: "assets/images/product/nike/nike-air-force-1-07-2.webp",
         gallery: [
             "assets/images/product/nike/nike-air-force-1-07-1.webp",
+            "assets/images/product/nike/nike-air-force-1-07-1.webp",
             "assets/images/product/nike/nike-air-force-1-07-2.webp"
         ],
         description: "The radiance lives on in the Nike Air Force 1 '07, the b-ball icon that puts a fresh spin on what you know best: crisp leather and perfect style."
@@ -536,26 +561,27 @@ const products = [
 
     {
         id: 24,
-        slug: "nike-zoom-freak-4",
-        name: "Nike Zoom Freak 4",
+        slug: "nike-dunk-low-retro",
+        name: "Nike Dunk Low Retro",
         brand: "Nike",
         category: "footwear",
         subCategory: "sneakers",
-        price: 3800000,
-        oldPrice: 4500000,
-        badge: "Sale",
-        rating: 4.7,
-        stock: 18,
+        price: 2850000,
+        oldPrice: 3200000,
+        badge: "New",
+        rating: 4.8,
+        stock: 20,
         featured: false,
-        colors: ["Black", "White"],
+        colors: ["Navy", "Grey"],
         sizes: ["39", "40", "41", "42", "43"],
-        image: "assets/images/product/nike/nike-zoom-freak-4-2.webp",
+        image: "assets/images/product/nike/nike-dunk-low-retro-3.webp",
         gallery: [
-            "assets/images/product/nike/nike-zoom-freak-4-1.webp",
-            "assets/images/product/nike/nike-zoom-freak-4-2.webp",
-            "assets/images/product/nike/nike-zoom-freak-4-3.webp",
+            "assets/images/product/nike/nike-dunk-low-retro-1.webp",
+            "assets/images/product/nike/nike-dunk-low-retro-1.webp",
+            "assets/images/product/nike/nike-dunk-low-retro-2.webp",
+            "assets/images/product/nike/nike-dunk-low-retro-3.webp",
         ],
-        description: "Giannis Antetokounmpo's signature shoe is engineered with multi-directional traction to help you drive to the rim with power."
+        description: "Created for the hardwood but taken to the streets, the '80s b-ball icon returns with classic details and throwback hoops flair."
     },
 
     // ----- APPAREL (5 Sản phẩm - 33%) -----
@@ -576,6 +602,7 @@ const products = [
         sizes: ["S", "M", "L", "XL"],
         image: "assets/images/product/nike/nike-sportswear-tech-fleece-1.webp",
         gallery: [
+            "assets/images/product/nike/nike-sportswear-tech-fleece-1.webp",
             "assets/images/product/nike/nike-sportswear-tech-fleece-1.webp",
             "assets/images/product/nike/nike-sportswear-tech-fleece-2.webp",
             "assets/images/product/nike/nike-sportswear-tech-fleece-3.webp",
@@ -600,6 +627,7 @@ const products = [
         image: "assets/images/product/nike/nike-windrunner-woven-jacket-1.webp",
         gallery: [
             "assets/images/product/nike/nike-windrunner-woven-jacket-1.webp",
+            "assets/images/product/nike/nike-windrunner-woven-jacket-1.webp",
             "assets/images/product/nike/nike-windrunner-woven-jacket-2.webp",
             "assets/images/product/nike/nike-windrunner-woven-jacket-3.webp",
         ],
@@ -622,6 +650,7 @@ const products = [
         sizes: ["S", "M", "L", "XL"],
         image: "assets/images/product/nike/nike-club-fleece-hoodie-1.webp",
         gallery: [
+            "assets/images/product/nike/nike-club-fleece-hoodie-1.webp",
             "assets/images/product/nike/nike-club-fleece-hoodie-1.webp",
             "assets/images/product/nike/nike-club-fleece-hoodie-2.webp",
             "assets/images/product/nike/nike-club-fleece-hoodie-3.webp",
@@ -646,6 +675,7 @@ const products = [
         image: "assets/images/product/nike/nike-drifit-legend-tee-1.webp",
         gallery: [
             "assets/images/product/nike/nike-drifit-legend-tee-1.webp",
+            "assets/images/product/nike/nike-drifit-legend-tee-1.webp",
             "assets/images/product/nike/nike-drifit-legend-tee-2.webp"
         ],
         description: "The Nike Dri-FIT Legend T-Shirt is a workout essential with odor-resistant fabric that wicks sweat away."
@@ -667,6 +697,7 @@ const products = [
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/nike/nike-drifit-stride-shorts-1.webp",
         gallery: [
+            "assets/images/product/nike/nike-drifit-stride-shorts-1.webp",
             "assets/images/product/nike/nike-drifit-stride-shorts-1.webp",
             "assets/images/product/nike/nike-drifit-stride-shorts-2.webp"
         ],
@@ -691,6 +722,7 @@ const products = [
         sizes: [],
         image: "assets/images/product/nike/nike-heritage-backpack-2.webp",
         gallery: [
+            "assets/images/product/nike/nike-heritage-backpack-1.webp",
             "assets/images/product/nike/nike-heritage-backpack-1.webp",
             "assets/images/product/nike/nike-heritage-backpack-2.webp",
             "assets/images/product/nike/nike-heritage-backpack-3.webp",
@@ -724,6 +756,7 @@ const products = [
         image: "assets/images/product/levis/levis-501-original-jeans-3.webp",
         gallery: [
             "assets/images/product/levis/levis-501-original-jeans-1.webp",
+            "assets/images/product/levis/levis-501-original-jeans-1.webp",
             "assets/images/product/levis/levis-501-original-jeans-2.webp",
             "assets/images/product/levis/levis-501-original-jeans-3.webp"
         ],
@@ -751,7 +784,7 @@ const products = [
             "assets/images/product/levis/levis-511-slim-jeans-2.webp",
             "assets/images/product/levis/levis-511-slim-jeans-3.webp",
             "assets/images/product/levis/levis-511-slim-jeans-4.webp",
-            
+
         ],
         description: "A modern slim with room to move. The 511 Slim Fit Jeans are a classic since right now, designed to look good with everything."
     },
@@ -772,6 +805,7 @@ const products = [
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/levis/levis-512-slim-taper-jeans-3.webp",
         gallery: [
+            "assets/images/product/levis/levis-512-slim-taper-jeans-1.webp",
             "assets/images/product/levis/levis-512-slim-taper-jeans-1.webp",
             "assets/images/product/levis/levis-512-slim-taper-jeans-2.webp",
             "assets/images/product/levis/levis-512-slim-taper-jeans-3.webp"
@@ -795,36 +829,14 @@ const products = [
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/levis/levis-505-regular-jeans-2.webp",
         gallery: [
-            "assets/images/products/levis/levis-505-regular-jeans-1.jpg",
-            "assets/images/products/levis/levis-505-regular-jeans-2.jpg"
+            "assets/images/product/levis/levis-505-regular-jeans-2.webp",
+            "assets/images/product/levis/levis-505-regular-jeans-2.webp",
+            "assets/images/product/levis/levis-505-regular-jeans-1.webp"
         ],
         description: "The original zip fly, created in 1967. With a comfortable straight leg and classic styling, this fit works for all body types."
     },
     {
         id: 35,
-        slug: "levis-xx-chino-pants",
-        name: "Levi's XX Chino Standard Pants",
-        brand: "Levi's",
-        category: "bottomwear",
-        subCategory: "pants",
-        price: 1450000,
-        oldPrice: 1750000,
-        badge: "Sale",
-        rating: 4.6,
-        stock: 28,
-        featured: false,
-        colors: ["Navy", "Khaki"],
-        sizes: ["29", "30", "31", "32", "34"],
-        image: "assets/images/product/levis/levis-xx-chino-pants-2.webp",
-        gallery: [
-            "assets/images/product/levis/levis-xx-chino-pants-1.webp",
-            "assets/images/product/levis/levis-xx-chino-pants-3.webp",
-            "assets/images/product/levis/levis-xx-chino-pants-3.webp"
-        ],
-        description: "These aren't your dad's khakis. Soft, comfortable, and versatile chinos with a modern standard fit."
-    },
-    {
-        id: 36,
         slug: "levis-550-relaxed-jeans",
         name: "Levi's 550 Relaxed Fit Jeans",
         brand: "Levi's",
@@ -847,6 +859,31 @@ const products = [
         ],
         description: "A comfortable classic introduced in 1985. Relaxed through the seat and thigh for an easy-going style."
     },
+    {
+        id: 36,
+        slug: "levis-xx-chino-pants",
+        name: "Levi's XX Chino Standard Pants",
+        brand: "Levi's",
+        category: "bottomwear",
+        subCategory: "pants",
+        price: 1450000,
+        oldPrice: 1750000,
+        badge: "Sale",
+        rating: 4.6,
+        stock: 28,
+        featured: false,
+        colors: ["Grey", "Khaki"],
+        sizes: ["29", "30", "31", "32", "34"],
+        image: "assets/images/product/levis/levis-xx-chino-pants-2.webp",
+        gallery: [
+            "assets/images/product/levis/levis-xx-chino-pants-1.webp",
+            "assets/images/product/levis/levis-xx-chino-pants-1.webp",
+            "assets/images/product/levis/levis-xx-chino-pants-2.webp",
+            "assets/images/product/levis/levis-xx-chino-pants-3.webp"
+        ],
+        description: "These aren't your dad's khakis. Soft, comfortable, and versatile chinos with a modern standard fit."
+    },
+
 
     // ----- TOPWEAR: JACKETS & SHIRTS & TEES (6 Sản phẩm) -----
     {
@@ -866,6 +903,7 @@ const products = [
         sizes: ["S", "M", "L", "XL"],
         image: "assets/images/product/levis/levis-trucker-jacket-2.webp",
         gallery: [
+            "assets/images/product/levis/levis-trucker-jacket-1.webp",
             "assets/images/product/levis/levis-trucker-jacket-1.webp",
             "assets/images/product/levis/levis-trucker-jacket-2.webp",
             "assets/images/product/levis/levis-trucker-jacket-3.webp"
@@ -890,6 +928,7 @@ const products = [
         image: "assets/images/product/levis/levis-sherpa-trucker-jacket-1.webp",
         gallery: [
             "assets/images/product/levis/levis-sherpa-trucker-jacket-1.webp",
+            "assets/images/product/levis/levis-sherpa-trucker-jacket-1.webp",
             "assets/images/product/levis/levis-sherpa-trucker-jacket-2.webp",
             "assets/images/product/levis/levis-sherpa-trucker-jacket-3.webp",
         ],
@@ -913,6 +952,7 @@ const products = [
         image: "assets/images/product/levis/levis-batwing-logo-tshirt-2.webp",
         gallery: [
             "assets/images/product/levis/levis-batwing-logo-tshirt-1.webp",
+            "assets/images/product/levis/levis-batwing-logo-tshirt-1.webp",
             "assets/images/product/levis/levis-batwing-logo-tshirt-2.webp"
         ],
         description: "A super-soft, classic crewneck tee featuring the world-famous Levi's batwing logo across the chest."
@@ -930,10 +970,11 @@ const products = [
         rating: 4.7,
         stock: 22,
         featured: false,
-        colors: ["Black", "White", "Blue"],
+        colors: ["Navy", "Blue"],
         sizes: ["S", "M", "L", "XL"],
         image: "assets/images/product/levis/levis-western-denim-shirt-3.webp",
         gallery: [
+            "assets/images/product/levis/levis-western-denim-shirt-1.webp",
             "assets/images/product/levis/levis-western-denim-shirt-1.webp",
             "assets/images/product/levis/levis-western-denim-shirt-2.webp",
             "assets/images/product/levis/levis-western-denim-shirt-3.webp"
@@ -958,6 +999,7 @@ const products = [
         image: "assets/images/product/levis/levis-graphic-hoodie-1.webp",
         gallery: [
             "assets/images/product/levis/levis-graphic-hoodie-1.webp",
+            "assets/images/product/levis/levis-graphic-hoodie-1.webp",
             "assets/images/product/levis/levis-graphic-hoodie-2.webp",
             "assets/images/product/levis/levis-graphic-hoodie-3.webp",
         ],
@@ -981,7 +1023,8 @@ const products = [
         image: "assets/images/product/levis/levis-housemark-polo-3.webp",
         gallery: [
             "assets/images/product/levis/levis-housemark-polo-1.webp",
-            "assets/images/product/levis/levis-housemark-polo-2.webp",
+            "assets/images/product/levis/levis-housemark-polo-1.webp",
+
             "assets/images/product/levis/levis-housemark-polo-3.webp",
         ],
         description: "A refined polo shirt made from breathable pique cotton, finished with a subtle Levi's logo on the chest."
@@ -1005,6 +1048,7 @@ const products = [
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/levis/levis-woods-canvas-sneakers-2.webp",
         gallery: [
+            "assets/images/product/levis/levis-woods-canvas-sneakers-1.webp",
             "assets/images/product/levis/levis-woods-canvas-sneakers-1.webp",
             "assets/images/product/levis/levis-woods-canvas-sneakers-2.webp",
             "assets/images/product/levis/levis-woods-canvas-sneakers-3.webp",
@@ -1031,6 +1075,7 @@ const products = [
         image: "assets/images/product/levis/levis-classic-leather-belt-1.webp",
         gallery: [
             "assets/images/product/levis/levis-classic-leather-belt-1.webp",
+            "assets/images/product/levis/levis-classic-leather-belt-1.webp",
             "assets/images/product/levis/levis-classic-leather-belt-2.webp"
         ],
         description: "A sturdy, genuine leather belt crafted to last. The essential accessory to complete your favorite pair of jeans."
@@ -1052,6 +1097,7 @@ const products = [
         sizes: [], // Phụ kiện rỗng size
         image: "assets/images/product/levis/levis-batwing-cap-1.webp",
         gallery: [
+            "assets/images/product/levis/levis-batwing-cap-1.webp",
             "assets/images/product/levis/levis-batwing-cap-1.webp",
             "assets/images/product/levis/levis-batwing-cap-2.webp",
             "assets/images/product/levis/levis-batwing-cap-3.webp",
@@ -1080,11 +1126,12 @@ const products = [
         featured: true, // Signature Product #1
         colors: ["Black", "White", "Blue"],
         sizes: ["S", "M", "L", "XL"],
-        image: "assets/images/product/tommy/tommy-hilfiger-1985-regular-polo-1.webp",
+        image: "assets/images/product/tommy/tommy-hilfiger-1985-regular-polo-2.webp",
         gallery: [
-            "assets/images/product/tommy/tommy-hilfiger-1985-regular-polo-1.webp",
+            "assets/images/product/tommy/tommy-hilfiger-1985-regular-polo-3.webp",
+            "assets/images/product/tommy/tommy-hilfiger-1985-regular-polo-3.webp",
             "assets/images/product/tommy/tommy-hilfiger-1985-regular-polo-2.webp",
-            "assets/images/product/tommy/tommy-hilfiger-1985-regular-polo-3.webp"
+            "assets/images/product/tommy/tommy-hilfiger-1985-regular-polo-1.webp"
         ],
         description: "An everyday essential. This classic polo shirt is crafted from stretch cotton pique for comfort and features the iconic flag embroidery on the chest."
     },
@@ -1106,6 +1153,7 @@ const products = [
         image: "assets/images/product/tommy/tommy-hilfiger-oxford-shirt-2.webp",
         gallery: [
             "assets/images/product/tommy/tommy-hilfiger-oxford-shirt-1.webp",
+            "assets/images/product/tommy/tommy-hilfiger-oxford-shirt-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-oxford-shirt-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-oxford-shirt-3.webp"
         ],
@@ -1126,8 +1174,9 @@ const products = [
         featured: true, // Signature Product #2
         colors: ["Black", "Khaki"],
         sizes: ["S", "M", "L", "XL"],
-        image: "assets/images/product/tommy/tommy-hilfiger-jasmetkap-jacket-2.webp",
+        image: "assets/images/product/tommy/tommy-hilfiger-jasmetkap-jacket-1.webp",
         gallery: [
+            "assets/images/product/tommy/tommy-hilfiger-jasmetkap-jacket-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-jasmetkap-jacket-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-jasmetkap-jacket-2.webp"
         ],
@@ -1146,10 +1195,11 @@ const products = [
         rating: 4.6,
         stock: 40,
         featured: false,
-        colors: ["White", "Blue"],
+        colors: ["Green", "Blue", "Red"],
         sizes: ["S", "M", "L", "XL"],
-        image: "assets/images/product/tommy/tommy-hilfiger-logo-tshirt-2.webp",
+        image: "assets/images/product/tommy/tommy-hilfiger-logo-tshirt-3.webp",
         gallery: [
+            "assets/images/product/tommy/tommy-hilfiger-logo-tshirt-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-logo-tshirt-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-logo-tshirt-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-logo-tshirt-3.webp"
@@ -1171,11 +1221,11 @@ const products = [
         featured: false,
         colors: ["Navy", "Grey", "Blue"],
         sizes: ["S", "M", "L", "XL"],
-        image: "assets/images/product/tommy/tommy-hilfiger-fleece-hoodie-2.webp",
+        image: "assets/images/product/tommy/tommy-hilfiger-fleece-hoodie-3.webp",
         gallery: [
-            "assets/images/product/tommy/tommy-hilfiger-fleece-hoodie-1.webp",
-            "assets/images/product/tommy/tommy-hilfiger-fleece-hoodie-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-fleece-hoodie-3.webp",
+            "assets/images/product/tommy/tommy-hilfiger-fleece-hoodie-3.webp",
+            "assets/images/product/tommy/tommy-hilfiger-fleece-hoodie-1.webp",
         ],
         description: "Cozy up in this premium fleece hoodie featuring a drawstring hood, kangaroo pocket, and understated monogram branding."
     },
@@ -1196,8 +1246,9 @@ const products = [
         featured: false,
         colors: ["Black", "Navy", "Khaki"],
         sizes: ["29", "30", "31", "32", "34"],
-        image: "assets/images/product/tommy/tommy-hilfiger-denton-chinos-3.webp",
+        image: "assets/images/product/tommy/tommy-hilfiger-denton-chinos-2.webp",
         gallery: [
+            "assets/images/product/tommy/tommy-hilfiger-denton-chinos-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-denton-chinos-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-denton-chinos-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-denton-chinos-3.webp",
@@ -1221,6 +1272,7 @@ const products = [
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/tommy/tommy-hilfiger-bleecker-chinos-3.webp",
         gallery: [
+            "assets/images/product/tommy/tommy-hilfiger-bleecker-chinos-3.webp",
             "assets/images/product/tommy/tommy-hilfiger-bleecker-chinos-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-bleecker-chinos-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-bleecker-chinos-3.webp"
@@ -1240,10 +1292,11 @@ const products = [
         rating: 4.8,
         stock: 15,
         featured: false,
-        colors: ["Black", "Navy", "Khaki"],
+        colors: ["Blue", "Navy",],
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/tommy/tommy-hilfiger-scanton-jeans-1.webp",
         gallery: [
+            "assets/images/product/tommy/tommy-hilfiger-scanton-jeans-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-scanton-jeans-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-scanton-jeans-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-scanton-jeans-3.webp",
@@ -1268,6 +1321,7 @@ const products = [
         image: "assets/images/product/tommy/tommy-hilfiger-brooklyn-shorts-2.webp",
         gallery: [
             "assets/images/product/tommy/tommy-hilfiger-brooklyn-shorts-1.webp",
+            "assets/images/product/tommy/tommy-hilfiger-brooklyn-shorts-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-brooklyn-shorts-2.webp",
         ],
         description: "Warm-weather ready. These versatile twill shorts feature a regular fit and side pockets, ideal for a relaxed weekend look."
@@ -1285,10 +1339,11 @@ const products = [
         rating: 4.7,
         stock: 22,
         featured: false,
-        colors: ["White", "Navy", "Khaki"],
+        colors: ["White", "Green", "Blue", "Khaki"],
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/tommy/tommy-hilfiger-fleece-shorts-2.webp",
         gallery: [
+            "assets/images/product/tommy/tommy-hilfiger-fleece-shorts-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-fleece-shorts-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-fleece-shorts-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-fleece-shorts-3.webp",
@@ -1316,6 +1371,7 @@ const products = [
         image: "assets/images/product/tommy/tommy-hilfiger-essential-sneakers-2.webp",
         gallery: [
             "assets/images/product/tommy/tommy-hilfiger-essential-sneakers-1.webp",
+            "assets/images/product/tommy/tommy-hilfiger-essential-sneakers-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-essential-sneakers-2.webp"
         ],
         description: "Clean, crisp, and classic. These low-top leather sneakers feature subtle flag branding and a comfortable rubber cupsole."
@@ -1338,6 +1394,7 @@ const products = [
         image: "assets/images/product/tommy/tommy-hilfiger-flag-slides-2.webp",
         gallery: [
             "assets/images/product/tommy/tommy-hilfiger-flag-slides-1.webp",
+            "assets/images/product/tommy/tommy-hilfiger-flag-slides-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-flag-slides-2.webp",
         ],
         description: "Poolside perfection. Slip into these lightweight slides featuring a contoured footbed and the iconic Tommy flag on the strap."
@@ -1357,10 +1414,11 @@ const products = [
         rating: 4.8,
         stock: 30,
         featured: false,
-        colors: ["Black", "Khaiki"],
+        colors: ["Black", "Khaki", "Brown"],
         sizes: [], // Phụ kiện rỗng size
         image: "assets/images/product/tommy/tommy-hilfiger-leather-belt-1.webp",
         gallery: [
+            "assets/images/product/tommy/tommy-hilfiger-leather-belt-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-leather-belt-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-leather-belt-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-leather-belt-3.webp",
@@ -1386,6 +1444,7 @@ const products = [
         image: "assets/images/product/tommy/tommy-hilfiger-bifold-wallet-1.webp",
         gallery: [
             "assets/images/product/tommy/tommy-hilfiger-bifold-wallet-1.webp",
+            "assets/images/product/tommy/tommy-hilfiger-bifold-wallet-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-bifold-wallet-2.webp",
         ],
         description: "Keep your essentials organized in style. This elegant leather wallet offers multiple card slots and a spacious bill compartment."
@@ -1407,6 +1466,7 @@ const products = [
         sizes: [], // Phụ kiện rỗng size
         image: "assets/images/product/tommy/tommy-hilfiger-classic-cap-1.webp",
         gallery: [
+            "assets/images/product/tommy/tommy-hilfiger-classic-cap-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-classic-cap-1.webp",
             "assets/images/product/tommy/tommy-hilfiger-classic-cap-2.webp",
             "assets/images/product/tommy/tommy-hilfiger-classic-cap-3.webp",
@@ -1434,10 +1494,11 @@ const products = [
         rating: 4.9,
         stock: 45,
         featured: true, // Signature Product #1
-        colors: ["Black", "White", "Blue"],
+        colors: ["Black", "Grey", "Blue"],
         sizes: ["S", "M", "L", "XL"],
         image: "assets/images/product/calvin/ck-monogram-logo-tshirt-2.webp",
         gallery: [
+            "assets/images/product/calvin/ck-monogram-logo-tshirt-2.webp",
             "assets/images/product/calvin/ck-monogram-logo-tshirt-1.webp",
             "assets/images/product/calvin/ck-monogram-logo-tshirt-2.webp",
             "assets/images/product/calvin/ck-monogram-logo-tshirt-3.webp"
@@ -1479,10 +1540,11 @@ const products = [
         rating: 4.7,
         stock: 20,
         featured: false,
-        colors: ["Black", "White", "Blue"],
+        colors: ["Black", "Grey",],
         sizes: ["S", "M", "L", "XL"],
-        image: "assets/images/product/calvin/ck-monogram-fleece-hoodie-2.webp",
+        image: "assets/images/product/calvin/ck-monogram-fleece-hoodie-1.webp",
         gallery: [
+            "assets/images/product/calvin/ck-monogram-fleece-hoodie-1.webp",
             "assets/images/product/calvin/ck-monogram-fleece-hoodie-1.webp",
             "assets/images/product/calvin/ck-monogram-fleece-hoodie-2.webp"
         ],
@@ -1506,7 +1568,10 @@ const products = [
         image: "assets/images/product/calvin/ck-classic-denim-jacket-1.webp",
         gallery: [
             "assets/images/product/calvin/ck-classic-denim-jacket-1.webp",
-            "assets/images/product/calvin/ck-classic-denim-jacket-2.webp"
+            "assets/images/product/calvin/ck-classic-denim-jacket-4.webp",
+            "assets/images/product/calvin/ck-classic-denim-jacket-3.webp",
+            "assets/images/product/calvin/ck-classic-denim-jacket-2.webp",
+            "assets/images/product/calvin/ck-classic-denim-jacket-1.webp"
         ],
         description: "An iconic layering piece. This denim jacket is cut in a standard fit and features logo-engraved metal hardware."
     },
@@ -1523,10 +1588,11 @@ const products = [
         rating: 4.6,
         stock: 25,
         featured: false,
-        colors: ["Black", "Grey", "Navy"],
+        colors: ["Black", "Khaki", "Navy"],
         sizes: ["S", "M", "L", "XL"],
         image: "assets/images/product/calvin/ck-slim-fit-poplin-shirt-1.webp",
         gallery: [
+            "assets/images/product/calvin/ck-slim-fit-poplin-shirt-1.webp",
             "assets/images/product/calvin/ck-slim-fit-poplin-shirt-1.webp",
             "assets/images/product/calvin/ck-slim-fit-poplin-shirt-2.webp",
             "assets/images/product/calvin/ck-slim-fit-poplin-shirt-3.webp",
@@ -1553,8 +1619,10 @@ const products = [
         image: "assets/images/product/calvin/ck-straight-fit-jeans-4.webp",
         gallery: [
             "assets/images/product/calvin/ck-straight-fit-jeans-1.webp",
+            "assets/images/product/calvin/ck-straight-fit-jeans-1.webp",
             "assets/images/product/calvin/ck-straight-fit-jeans-2.webp",
-            "assets/images/product/calvin/ck-straight-fit-jeans-3.webp"
+            "assets/images/product/calvin/ck-straight-fit-jeans-3.webp",
+            "assets/images/product/calvin/ck-straight-fit-jeans-4.webp",
         ],
         description: "Timeless denim. These straight fit jeans sit comfortably at the waist and offer a clean, classic leg silhouette."
     },
@@ -1571,13 +1639,15 @@ const products = [
         rating: 4.7,
         stock: 22,
         featured: false,
-        colors: ["Black", "Navy", "Khaki"],
+        colors: ["Navy", "Blue"],
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/calvin/ck-slim-taper-jeans-4.webp",
         gallery: [
             "assets/images/product/calvin/ck-slim-taper-jeans-1.webp",
+            "assets/images/product/calvin/ck-slim-taper-jeans-1.webp",
             "assets/images/product/calvin/ck-slim-taper-jeans-2.webp",
             "assets/images/product/calvin/ck-slim-taper-jeans-3.webp",
+            "assets/images/product/calvin/ck-slim-taper-jeans-4.webp",
         ],
         description: "Modern and sleek. Featuring a lower rise and a tailored taper from the knee to the ankle for a sharp look."
     },
@@ -1594,10 +1664,11 @@ const products = [
         rating: 4.6,
         stock: 28,
         featured: false,
-        colors: ["Black", "Navy", "Khaki"],
+        colors: ["Black", "Khaki"],
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/calvin/ck-stretch-chino-pants-1.webp",
         gallery: [
+            "assets/images/product/calvin/ck-stretch-chino-pants-1.webp",
             "assets/images/product/calvin/ck-stretch-chino-pants-1.webp",
             "assets/images/product/calvin/ck-stretch-chino-pants-2.webp"
         ],
@@ -1621,6 +1692,7 @@ const products = [
         image: "assets/images/product/calvin/ck-iconic-cotton-boxer-briefs-1.webp",
         gallery: [
             "assets/images/product/calvin/ck-iconic-cotton-boxer-briefs-1.webp",
+            "assets/images/product/calvin/ck-iconic-cotton-boxer-briefs-1.webp",
             "assets/images/product/calvin/ck-iconic-cotton-boxer-briefs-2.webp"
         ],
         description: "The original. The icon. Defined by the legendary Calvin Klein logo waistband, these boxer briefs offer breathable comfort and support."
@@ -1643,6 +1715,7 @@ const products = [
         image: "assets/images/product/calvin/ck-one-cotton-trunks-1.webp",
         gallery: [
             "assets/images/product/calvin/ck-one-cotton-trunks-1.webp",
+            "assets/images/product/calvin/ck-one-cotton-trunks-1.webp",
             "assets/images/product/calvin/ck-one-cotton-trunks-2.webp"
         ],
         description: "Classic design meets modern edge. Short-leg trunks crafted from premium microfiber cotton with a flexible, shape-retaining fit."
@@ -1662,10 +1735,11 @@ const products = [
         rating: 4.7,
         stock: 18,
         featured: false,
-        colors: ["Black", "White"],
+        colors: ["Khaki", "Pink", "White"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/calvin/ck-chunky-cupsole-sneakers-1.webp",
         gallery: [
+            "assets/images/product/calvin/ck-chunky-cupsole-sneakers-1.webp",
             "assets/images/product/calvin/ck-chunky-cupsole-sneakers-1.webp",
             "assets/images/product/calvin/ck-chunky-cupsole-sneakers-2.webp",
             "assets/images/product/calvin/ck-chunky-cupsole-sneakers-3.webp"
@@ -1690,6 +1764,7 @@ const products = [
         image: "assets/images/product/calvin/ck-monogram-slides-1.webp",
         gallery: [
             "assets/images/product/calvin/ck-monogram-slides-1.webp",
+            "assets/images/product/calvin/ck-monogram-slides-1.webp",
             "assets/images/product/calvin/ck-monogram-slides-2.webp"
         ],
         description: "Essential for warm days or post-workout comfort. Featuring a contoured EVA footbed and a wide strap with the CK monogram."
@@ -1709,14 +1784,15 @@ const products = [
         rating: 4.9,
         stock: 28,
         featured: false,
-        colors: ["Black"],
+        colors: ["Black", "Brown"],
         sizes: [], // Phụ kiện rỗng size
         image: "assets/images/product/calvin/ck-reversible-leather-belt-4.webp",
         gallery: [
-            "assets/images/product/calvin/ck-reversible-leather-belt-1.webp",
+            "assets/images/product/calvin/ck-reversible-leather-belt-4.webp",
+            "assets/images/product/calvin/ck-reversible-leather-belt-4.webp",
             "assets/images/product/calvin/ck-reversible-leather-belt-2.webp",
             "assets/images/product/calvin/ck-reversible-leather-belt-3.webp",
-             "assets/images/product/calvin/ck-reversible-leather-belt-4.webp"
+            "assets/images/product/calvin/ck-reversible-leather-belt-1.webp"
 
         ],
         description: "Two looks in one. A versatile genuine leather belt featuring a modern plaque buckle with engraved logo detailing."
@@ -1734,10 +1810,11 @@ const products = [
         rating: 4.6,
         stock: 40,
         featured: false,
-        colors: ["Black"],
+        colors: ["Black", "Khaiki"],
         sizes: [], // Phụ kiện rỗng size
         image: "assets/images/product/calvin/ck-classic-logo-cap-2.webp",
         gallery: [
+            "assets/images/product/calvin/ck-classic-logo-cap-1.webp",
             "assets/images/product/calvin/ck-classic-logo-cap-1.webp",
             "assets/images/product/calvin/ck-classic-logo-cap-2.webp",
         ],
@@ -1760,9 +1837,10 @@ const products = [
         sizes: [], // Phụ kiện rỗng size
         image: "assets/images/product/calvin/ck-campus-backpack-1.webp",
         gallery: [
-           "assets/images/product/calvin/ck-campus-backpack-1.webp",
-           "assets/images/product/calvin/ck-campus-backpack-2.webp",
-           "assets/images/product/calvin/ck-campus-backpack-3.webp",
+            "assets/images/product/calvin/ck-campus-backpack-3.webp",
+            "assets/images/product/calvin/ck-campus-backpack-3.webp",
+            "assets/images/product/calvin/ck-campus-backpack-1.webp",
+            "assets/images/product/calvin/ck-campus-backpack-2.webp",
         ],
         description: "Carry your essentials with modern minimalist style. Features a spacious main compartment, a laptop sleeve, and a durable faux-leather finish."
     },
@@ -1791,6 +1869,7 @@ const products = [
         image: "assets/images/product/gucci/gucci-blade-print-tshirt-2.webp",
         gallery: [
             "assets/images/product/gucci/gucci-blade-print-tshirt-1.webp",
+            "assets/images/product/gucci/gucci-blade-print-tshirt-1.webp",
             "assets/images/product/gucci/gucci-blade-print-tshirt-2.webp"
         ],
         description: "A slightly oversized T-shirt in premium cotton jersey, featuring the bold Gucci Blade print across the chest for a distinctive streetwear edge."
@@ -1813,6 +1892,7 @@ const products = [
         image: "assets/images/product/gucci/gucci-web-collar-polo-3.webp",
         gallery: [
             "assets/images/product/gucci/gucci-web-collar-polo-1.webp",
+            "assets/images/product/gucci/gucci-web-collar-polo-1.webp",
             "assets/images/product/gucci/gucci-web-collar-polo-2.webp",
             "assets/images/product/gucci/gucci-web-collar-polo-3.webp",
         ],
@@ -1831,10 +1911,11 @@ const products = [
         rating: 5.0,
         stock: 5,
         featured: false,
-        colors: ["Black", "White", "Blue"],
+        colors: ["Blue", "Brown", "Red",],
         sizes: ["S", "M", "L", "XL"],
         image: "assets/images/product/gucci/gucci-gg-jacquard-jacket-1.webp",
         gallery: [
+            "assets/images/product/gucci/gucci-gg-jacquard-jacket-1.webp",
             "assets/images/product/gucci/gucci-gg-jacquard-jacket-1.webp",
             "assets/images/product/gucci/gucci-gg-jacquard-jacket-2.webp",
             "assets/images/product/gucci/gucci-gg-jacquard-jacket-3.webp",
@@ -1854,10 +1935,11 @@ const products = [
         rating: 4.7,
         stock: 8,
         featured: false,
-        colors: ["Black", "White", "Blue"],
+        colors: ["Black", "Khaki"],
         sizes: ["S", "M", "L", "XL"],
-        image: "assets/images/product/gucci/gucci-interlocking-g-hoodie-2.webp",
+        image: "assets/images/product/gucci/gucci-interlocking-g-hoodie-1.webp",
         gallery: [
+            "assets/images/product/gucci/gucci-interlocking-g-hoodie-1.webp",
             "assets/images/product/gucci/gucci-interlocking-g-hoodie-1.webp",
             "assets/images/product/gucci/gucci-interlocking-g-hoodie-2.webp",
         ],
@@ -1878,10 +1960,11 @@ const products = [
         rating: 4.8,
         stock: 12,
         featured: false,
-        colors: ["Black", "Navy", "Khaki"],
+        colors: ["Blue", "Brown", "Khaki"],
         sizes: ["29", "30", "31", "32", "34"],
         image: "assets/images/product/gucci/gucci-gg-canvas-shorts-1.webp",
         gallery: [
+            "assets/images/product/gucci/gucci-gg-canvas-shorts-1.webp",
             "assets/images/product/gucci/gucci-gg-canvas-shorts-1.webp",
             "assets/images/product/gucci/gucci-gg-canvas-shorts-2.webp",
             "assets/images/product/gucci/gucci-gg-canvas-shorts-3.webp",
@@ -1906,6 +1989,7 @@ const products = [
         image: "assets/images/product/gucci/gucci-tapered-denim-jeans-1.webp",
         gallery: [
             "assets/images/product/gucci/gucci-tapered-denim-jeans-1.webp",
+            "assets/images/product/gucci/gucci-tapered-denim-jeans-1.webp",
             "assets/images/product/gucci/gucci-tapered-denim-jeans-2.webp",
             "assets/images/product/gucci/gucci-tapered-denim-jeans-3.webp",
             "assets/images/product/gucci/gucci-tapered-denim-jeans-4.webp"
@@ -1927,8 +2011,9 @@ const products = [
         featured: false,
         colors: ["Black", "Navy"],
         sizes: ["29", "30", "31", "32", "34"],
-        image: "assets/images/product/gucci/gucci-web-chino-pants-1.webp",
+        image: "assets/images/product/gucci/gucci-web-chino-pants-2.webp",
         gallery: [
+            "assets/images/product/gucci/gucci-web-chino-pants-2.webp",
             "assets/images/product/gucci/gucci-web-chino-pants-1.webp",
             "assets/images/product/gucci/gucci-web-chino-pants-2.webp",
         ],
@@ -1954,6 +2039,7 @@ const products = [
         image: "assets/images/product/gucci/gucci-ace-leather-sneakers-1.webp",
         gallery: [
             "assets/images/product/gucci/gucci-ace-leather-sneakers-1.webp",
+            "assets/images/product/gucci/gucci-ace-leather-sneakers-1.webp",
             "assets/images/product/gucci/gucci-ace-leather-sneakers-2.webp",
         ],
         description: "The classic low-top sneaker featuring the House's iconic Web stripe and mismatching metallic leather heel details. A timeless luxury staple."
@@ -1971,10 +2057,11 @@ const products = [
         rating: 4.8,
         stock: 12,
         featured: false,
-        colors: ["Black", "White"],
+        colors: ["Black", "Khaki"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/gucci/gucci-rhyton-sneakers-2.webp",
         gallery: [
+            "assets/images/product/gucci/gucci-rhyton-sneakers-1.webp",
             "assets/images/product/gucci/gucci-rhyton-sneakers-1.webp",
             "assets/images/product/gucci/gucci-rhyton-sneakers-2.webp"
         ],
@@ -1993,10 +2080,11 @@ const products = [
         rating: 4.7,
         stock: 18,
         featured: false,
-        colors: ["Blue","Khaiki", "White"],
+        colors: ["Blue", "Khaiki", "White"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/gucci/gucci-tennis-1977-sneakers-3.webp",
         gallery: [
+            "assets/images/product/gucci/gucci-tennis-1977-sneakers-1.webp",
             "assets/images/product/gucci/gucci-tennis-1977-sneakers-1.webp",
             "assets/images/product/gucci/gucci-tennis-1977-sneakers-2.webp",
             "assets/images/product/gucci/gucci-tennis-1977-sneakers-3.webp"
@@ -2021,6 +2109,7 @@ const products = [
         image: "assets/images/product/gucci/gucci-pursuit-web-slides-2.webp",
         gallery: [
             "assets/images/product/gucci/gucci-pursuit-web-slides-1.webp",
+            "assets/images/product/gucci/gucci-pursuit-web-slides-1.webp",
             "assets/images/product/gucci/gucci-pursuit-web-slides-2.webp"
         ],
         description: "Laid-back luxury. These molded rubber slides feature the unmistakable green and red striped Web across the strap."
@@ -2040,8 +2129,9 @@ const products = [
         featured: false,
         colors: ["Khaki", "Grey"],
         sizes: ["39", "40", "41", "42", "43"],
-        image: "assets/images/product/gucci/gucci-gg-supreme-slides-2.webp",
+        image: "assets/images/product/gucci/gucci-gg-supreme-slides-1.webp",
         gallery: [
+            "assets/images/product/gucci/gucci-gg-supreme-slides-1.webp",
             "assets/images/product/gucci/gucci-gg-supreme-slides-1.webp",
             "assets/images/product/gucci/gucci-gg-supreme-slides-2.webp"
         ],
@@ -2067,6 +2157,7 @@ const products = [
         image: "assets/images/product/gucci/gucci-gg-marmont-belt-1.webp",
         gallery: [
             "assets/images/product/gucci/gucci-gg-marmont-belt-1.webp",
+            "assets/images/product/gucci/gucci-gg-marmont-belt-1.webp",
             "assets/images/product/gucci/gucci-gg-marmont-belt-2.webp",
             "assets/images/product/gucci/gucci-gg-marmont-belt-3.webp"
         ],
@@ -2085,11 +2176,13 @@ const products = [
         rating: 4.9,
         stock: 18,
         featured: false,
-        colors: ["Black"],
+        colors: ["Khaki"],
         sizes: [], // Phụ kiện rỗng size
         image: "assets/images/product/gucci/gucci-gg-supreme-wallet-1.webp",
         gallery: [
             "assets/images/product/gucci/gucci-gg-supreme-wallet-1.webp",
+            "assets/images/product/gucci/gucci-gg-supreme-wallet-1.webp",
+
             "assets/images/product/gucci/gucci-gg-supreme-wallet-2.webp",
         ],
         description: "A classic bifold wallet designed in the environmentally conscious GG Supreme canvas, featuring multiple card slots and leather trim details."
@@ -2107,10 +2200,11 @@ const products = [
         rating: 4.8,
         stock: 22,
         featured: false,
-        colors: ["Black"],
+        colors: ["Khaki"],
         sizes: [], // Phụ kiện rỗng size
         image: "assets/images/product/gucci/gucci-aviator-sunglasses-1.webp",
         gallery: [
+            "assets/images/product/gucci/gucci-aviator-sunglasses-1.webp",
             "assets/images/product/gucci/gucci-aviator-sunglasses-1.webp",
             "assets/images/product/gucci/gucci-aviator-sunglasses-2.webp",
         ],
