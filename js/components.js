@@ -5,12 +5,12 @@ function createHeader() {
         <header class="main-header">
              <div class="flash-sale-bar">
                 <p class="scrolling-text">
-                    🔥 FLASH SALE — Use code <strong>TREND20</strong> for 20% off your entire order!
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Free shipping Vietnam
+                    EXCLUSIVE OFFER — Code <strong>TREND20</strong> for 20% off · Complimentary shipping on orders over 500,000 VND
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Curated luxury menswear · Authentic brands only
                 </p>
             </div>
             <div class="header-top">
-                <div class="container-fluid header-top-container">
+                <div class="container header-top-container">
                     <a href="index.html" class="logo-box">
                         <img src="assets/images/logo/logo.png" alt="Logo">
                         <span>MEN'S WEAR</span>
@@ -28,16 +28,15 @@ function createHeader() {
                             <a href="orders.html" class="header-icon tooltip-item" data-tooltip="Orders">
                                 <i class="fa-solid fa-receipt"></i>
                             </a>
-                            <a href="#" class="header-icon tooltip-item" data-tooltip="Wishlist">
-                                <i class="fa-regular fa-heart"></i>
-                            </a>
-
-                            <!-- CART ICON - MỞ MINI CART -->
+                             <!-- CART ICON - MỞ MINI CART -->
                             <a href="#" class="header-icon cart-icon tooltip-item" id="cartToggle" data-tooltip="Cart">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 <span id="cartCount">0</span>
                             </a>
-
+                            <a href="wishlist.html" class="header-icon wishlist-icon tooltip-item" data-tooltip="Wishlist">
+                                <i class="fa-regular fa-heart"></i>
+                                <span id="wishlistCount">0</span>
+                            </a>
                             <a href="login.html" class="header-icon tooltip-item" data-tooltip="Account">
                                 <i class="fa-solid fa-circle-user"></i>
                             </a>
@@ -58,68 +57,71 @@ function createHeader() {
                         </a>
 
                         <div class="mega-menu product-mega-menu">
-                            <div class="mega-column">
-                                <h3>ALL PRODUCTS</h3>
-                                <a href="products.html">All Products</a>
-                                <a href="products.html?filter=new">New Product</a>
-                                <a href="products.html?filter=best-seller">Best Seller</a>
-                            </div>
-
-                            <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i> MEN'S SHIRT</h3>
-                                <a href="products.html?category=topwear">All Topwear</a>
-                                <a href="products.html?category=topwear&sub=tshirt">T-shirt</a>
-                                <a href="products.html?category=topwear&sub=polo">Polo shirt</a>
-                                <a href="products.html?category=topwear&sub=shirt">Shirt</a>
-                                <a href="products.html?category=topwear&sub=jacket">Jacket</a>
-                                <a href="products.html?category=topwear&sub=hoodie">Hoodie</a>
-                                <a href="products.html?category=topwear&sub=sweater">Sweater</a>
-                            </div>
-
-                            <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i> MEN'S PANTS</h3>
-                                <a href="products.html?category=bottomwear">All Bottomwear</a>
-                                <a href="products.html?category=bottomwear&sub=jeans">Jeans</a>
-                                <a href="products.html?category=bottomwear&sub=shorts">Shorts</a>
-                                <a href="products.html?category=bottomwear&sub=pants">Kaki pants / Trousers</a>
-                             </div>
-
-                            <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i> SHOES & SANDALS</h3>
-                                <a href="products.html?category=footwear">All Footwear</a>
-                                <a href="products.html?category=footwear&sub=sneakers">Sport shoes / Sneakers</a>
-                                <a href="products.html?category=footwear&sub=slides">Sandals</a>
-                            </div>
-
-                            <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i> ACCESSORIES</h3>
-                                <a href="products.html?category=accessories">All Accessories</a>
-                                <a href="products.html?category=accessories&sub=backpack">Backpacks, Bags & Wallets</a>
-                                <a href="products.html?category=accessories&sub=cap">Hat</a>
-                                <a href="products.html?category=accessories&sub=belt">Belt</a>
-                                <a href="products.html?category=accessories&sub=sunglasses">Glasses</a>
-                            </div>
-
-                            <div class="mega-image-wrapper">
-                                <div class="mega-image-box">
-                                    <div class="product-menu-slider two-images">
-                                        <img src="assets/images/product/calvin/ck-reversible-leather-belt-4.webp" alt="New Collection 1">
-                                        <img src="assets/images/product/calvin/ck-campus-backpack-2.webp" alt="New Collection 2">
-                                    </div>
-                                    <div class="mega-image-content">
-                                        <h3>New Collection</h3>
-                                        <a href="products.html?filter=new">Shop Now</a>
-                                    </div>
+                            <div class="container mega-menu-container">
+                                <div class="mega-column">
+                                    <h3><a href="products.html">ALL PRODUCTS</h3>
+        
+                                    <a href="products.html?filter=new">New Product</a>
+                                    <a href="products.html?filter=best-seller">Best Seller</a>
                                 </div>
 
-                                <div class="mega-image-box">
-                                    <div class="product-menu-slider two-images">
-                                        <img src="assets/images/product/nike/nike-lebron-20-1.webp" alt="Sport Style 1">
-                                        <img src="assets/images/product/nike/nike-air-max-90-2.webp" alt="Sport Style 2">
+                                <div class="mega-column">
+                                    <h3> <a href="products.html?category=topwear">MEN'S SHIRT</h3>
+                        
+                                    <a href="products.html?category=topwear&sub=tshirt">T-shirt</a>
+                                    <a href="products.html?category=topwear&sub=polo">Polo shirt</a>
+                                    <a href="products.html?category=topwear&sub=shirt">Shirt</a>
+                                    <a href="products.html?category=topwear&sub=jacket">Jacket</a>
+                                    <a href="products.html?category=topwear&sub=hoodie">Hoodie</a>
+                                    <a href="products.html?category=topwear&sub=sweater">Sweater</a>
+                                </div>
+
+                                <div class="mega-column">
+                                    <h3><a href="products.html?category=bottomwear"> MEN'S PANTS</h3>
+                                    
+                                    <a href="products.html?category=bottomwear&sub=jeans">Jeans</a>
+                                    <a href="products.html?category=bottomwear&sub=shorts">Shorts</a>
+                                    <a href="products.html?category=bottomwear&sub=pants">Kaki pants</a>
+                                    <a href="products.html?category=bottomwear&sub=pants"> Trousers</a>
+                                 </div>
+
+                                <div class="mega-column">
+                                    <h3><a href="products.html?category=footwear"> SHOES & SANDALS</h3>
+                                     <a href="products.html?category=footwear&sub=sneakers">Sport shoes</a>
+                                    <a href="products.html?category=footwear&sub=sneakers">Sneakers</a>
+                                    <a href="products.html?category=footwear&sub=slides">Sandals</a>
+                                </div>
+
+                                <div class="mega-column">
+                                    <h3><a href="products.html?category=accessories"> ACCESSORIES</h3>
+                                    
+                                    <a href="products.html?category=accessories&sub=backpack">Backpacks </br>Bags & Wallets</a>
+                                    <a href="products.html?category=accessories&sub=cap">Hat</a>
+                                    <a href="products.html?category=accessories&sub=belt">Belt</a>
+                                    <a href="products.html?category=accessories&sub=sunglasses">Glasses</a>
+                                </div>
+
+                                <div class="mega-image-wrapper">
+                                    <div class="mega-image-box">
+                                        <div class="product-menu-slider two-images">
+                                            <img src="assets/images/product/calvin/ck-reversible-leather-belt-4.webp" alt="New Collection 1">
+                                            <img src="assets/images/product/calvin/ck-campus-backpack-2.webp" alt="New Collection 2">
+                                        </div>
+                                        <div class="mega-image-content">
+                                            <h3>New Collection</h3>
+                                            <a href="products.html?filter=new">Shop Now</a>
+                                        </div>
                                     </div>
-                                    <div class="mega-image-content">
-                                        <h3>Sport Style</h3>
-                                        <a href="products.html?category=footwear">Shop Now</a>
+
+                                    <div class="mega-image-box">
+                                        <div class="product-menu-slider two-images">
+                                            <img src="assets/images/product/nike/nike-lebron-20-1.webp" alt="Sport Style 1">
+                                            <img src="assets/images/product/nike/nike-air-max-90-2.webp" alt="Sport Style 2">
+                                        </div>
+                                        <div class="mega-image-content">
+                                            <h3>Sport Style</h3>
+                                            <a href="products.html?category=footwear">Shop Now</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -132,33 +134,35 @@ function createHeader() {
                         </a>
 
                         <div class="mega-menu brand-mega-menu">
-                            <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i> SPORT BRANDS</h3>
-                                <a href="brand-detail.html?brand=Adidas">Adidas</a>
-                                <a href="brand-detail.html?brand=Nike">Nike</a>
-                            </div>
+                            <div class="container mega-menu-container">
+                                <div class="mega-column">
+                                    <h3></i> SPORT BRANDS</h3>
+                                    <a href="brand-detail.html?brand=Adidas">Adidas</a>
+                                    <a href="brand-detail.html?brand=Nike">Nike</a>
+                                </div>
 
-                            <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i> LUXURY BRANDS</h3>
-                                <a href="brand-detail.html?brand=Gucci">Gucci</a>
-                                <a href="brand-detail.html?brand=Calvin Klein">Calvin Klein</a>
-                            </div>
+                                <div class="mega-column">
+                                    <h3></i> LUXURY BRANDS</h3>
+                                    <a href="brand-detail.html?brand=Gucci">Gucci</a>
+                                    <a href="brand-detail.html?brand=Calvin Klein">Calvin Klein</a>
+                                </div>
 
-                            <div class="mega-column">
-                                <h3><i class="fa-solid fa-tags"></i> CASUAL BRANDS</h3>
-                                <a href="brand-detail.html?brand=Levi's">Levi's</a>
-                                <a href="brand-detail.html?brand=Tommy Hilfiger">Tommy Hilfiger</a>
-                            </div>
+                                <div class="mega-column">
+                                    <h3></i> CASUAL BRANDS</h3>
+                                    <a href="brand-detail.html?brand=Levi's">Levi's</a>
+                                    <a href="brand-detail.html?brand=Tommy Hilfiger">Tommy Hilfiger</a>
+                                </div>
 
-                            <div class="brand-image-box">
-                                <div class="brand-slider three-images">
-                                    <img src="assets/images/brand/adidas.jpg" alt="Brands Adidas">
-                                    <img src="assets/images/brand/tommy.jpg" alt="Brands Tommy">
-                                    <img src="assets/images/brand/nike.webp" alt="Brands Nike">
-                                 </div>
-                                <div class="brand-image-content">
-                                    <h3>Top Brands</h3>
-                                    <a href="brand.html">View All Brands</a>
+                                <div class="brand-image-box">
+                                    <div class="brand-slider three-images">
+                                        <img src="assets/images/brand/adidas.jpg" alt="Brands Adidas">
+                                        <img src="assets/images/brand/tommy.jpg" alt="Brands Tommy">
+                                        <img src="assets/images/brand/nike.webp" alt="Brands Nike">
+                                     </div>
+                                    <div class="brand-image-content">
+                                        <h3>Top Brands</h3>
+                                        <a href="brand.html">View All Brands</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -192,7 +196,7 @@ function createHeader() {
                     <span id="miniCartTotal">0 VND</span>
                 </div>
                 <a href="cart.html" class="view-cart-btn">View Cart</a>
-                <a href="checkout.html" class="checkout-btn">Checkout</a>
+                <a href="payment.html" class="checkout-btn">Checkout</a>
             </div>
         </div>
     `;
@@ -204,7 +208,7 @@ function createHeader() {
 function createFooter() {
     return `
         <footer class="main-footer">
-            <div class="container-fluid footer-container">
+            <div class="container footer-container">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 footer-column">
                         <h3>Men's Wear</h3>
@@ -260,9 +264,9 @@ function createFooter() {
 
                     <div class="col-lg-3 col-md-6 footer-column">
                         <h4>Contact Information</h4>
-                        <p><i class="fa-solid fa-map-pin"></i>  <b>Address:</b> 66 Vo Van Tan Street, Da Nang City, Vietnam</p>
-                        <p><i class="fa-solid fa-square-phone"></i> <b> Call center CSKH: </b> 034 2230 2344</p>
-                        <p><i class="fa-solid fa-square-envelope"></i> <b>LH Email:</b> cskh.support.mens@menswear.com</p>
+                        <p><i class="fa-solid fa-map-pin"></i>66 Vo Van Tan Street, Da Nang City, Vietnam</p>
+                        <p><i class="fa-solid fa-square-phone"></i> 034 2230 2344</p>
+                        <p><i class="fa-solid fa-square-envelope"></i> cskh.support.mens@menswear.com</p>
                     </div>
                 </div>
 

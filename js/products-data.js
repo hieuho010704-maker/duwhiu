@@ -1001,7 +1001,7 @@ const products = [
         rating: 4.4,
         stock: 14,
         featured: false,
-        colors: ["Black", "White", "Khak"],
+        colors: ["Black", "White", "Khaki"],
         sizes: ["39", "40", "41", "42", "43"],
         image: "assets/images/product/levis/levis-woods-canvas-sneakers-2.webp",
         gallery: [

@@ -325,11 +325,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ================= SLIDER AUTO PLAY =================
 document.addEventListener('DOMContentLoaded', function () {
-    const slider = document.getElementById('productCategorySlider');
+    const slider = document.getElementById('heroCarousel');
     if (slider) {
         if (!bootstrap.Carousel.getInstance(slider)) {
             new bootstrap.Carousel(slider, {
-                interval: 3500,
+                interval: 6000,
                 ride: 'carousel',
                 pause: false,
                 wrap: true

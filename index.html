@@ -4,19 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Men's Wear</title>
+    <title>Men's Wear — Luxury Menswear</title>
+    <meta name="description" content="Curated luxury menswear from the world's finest brands.">
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/luxury-global.css">
 </head>
 
 <body>
@@ -24,30 +22,172 @@
     <div id="header"></div>
 
     <main>
-        <section class="home-page">
-            <div class="container">
-                <h1>Men's Wear</h1>
-                <p>Modern fashion for men.</p>
+        <!-- Hero -->
+        <section class="luxury-hero">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators hero-dots">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active hero-dot"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" class="hero-dot"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" class="hero-dot"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active hero-slide" style="background-image: url('assets/images/banner/product.png')">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1>Refined Style</h1>
+                            <p>Discover curated pieces from Calvin to Gucci — where quality meets timeless elegance.</p>
+                            <a href="products.html" class="btn-luxury">Shop Collection</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item hero-slide" style="background-image: url('assets/images/banner/tops.png')">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1>Men's Shirt</h1>
+                            <p>Explore t-shirts, polo shirts, shirts, jackets, sweaters and hoodies.</p>
+                            <a href="products.html?category=topwear" class="btn-luxury">Shop Topwear</a>
+                        </div>
+                    </div>
+                    <div class="carousel-item hero-slide" style="background-image: url('assets/images/brand/adidas.jpg')">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <h1>Shoes & Sandals</h1>
+                            <p>From sport sneakers to refined sandals — every step matters.</p>
+                            <a href="products.html?category=footwear" class="btn-luxury">Shop Footwear</a>
+                        </div>
+                    </div>
+                </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
             </div>
+        </section>
+
+        <!-- Brand strip -->
+        <section class="brand-strip-section">
+            <div class="container">
+                <div id="homeBrandStrip" class="brand-strip"></div>
+            </div>
+        </section>
+
+        <!-- Featured -->
+        <section class="luxury-section reveal-on-scroll">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Curated Selection</span>
+                    <h2 class="section-title">Signature Pieces</h2>
+                    <p class="section-subtitle">Handpicked bestsellers that define modern luxury menswear.</p>
+                </div>
+                <div id="featuredProducts" class="row"></div>
+                <div class="text-center mt-5">
+                    <a href="products.html" class="btn-luxury btn-luxury-outline">View All Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editorial banner -->
+        <section class="editorial-banner reveal-on-scroll">
+            <div class="container">
+                <div class="editorial-grid">
+                    <div class="editorial-card editorial-dark">
+                        <img src="assets/images/product/calvin/ck-reversible-leather-belt-4.webp" alt="Accessories"
+                            loading="lazy">
+                        <div class="editorial-content">
+                            <span class="section-label">Accessories</span>
+                            <h2>Complete Your Look</h2>
+                            <a href="products.html?category=accessories" class="editorial-link">Shop Accessories →</a>
+                        </div>
+                    </div>
+                    <div class="editorial-card">
+                        <img src="assets/images/product/adidas/giay5-adidas.webp" alt="Sport Style" loading="lazy">
+                        <div class="editorial-content">
+                            <span class="section-label">Sport Luxe</span>
+                            <h2>Performance Meets Style</h2>
+                            <a href="products.html?category=footwear" class="editorial-link">Discover →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals -->
+        <section class="luxury-section bg-cream reveal-on-scroll">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Just Arrived</span>
+                    <h2 class="section-title">New Arrivals</h2>
+                </div>
+                <div id="newArrivals" class="row"></div>
+                <div class="text-center mt-5">
+                    <a href="products.html?filter=new" class="btn-luxury btn-luxury-outline">View New Products</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands -->
+        <section class="luxury-section reveal-on-scroll">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-label">Partner Brands</span>
+                    <h2 class="section-title">World-Class Labels</h2>
+                    <p class="section-subtitle">100% authentic products from official brand partners.</p>
+                </div>
+                <div id="luxuryBrands" class="row"></div>
+                <div class="text-center mt-5">
+                    <a href="brand.html" class="btn-luxury btn-luxury-outline">View Brand</a>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Values -->
+        <section class="luxury-values reveal-on-scroll">
+            <div class="container">
+                <div class="values-grid">
+                    <div class="value-item">
+                        <i class="fa-solid fa-certificate"></i>
+                        <h3>Authenticity Guaranteed</h3>
+                        <p>Every item verified genuine from authorized partners.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h3>Complimentary Shipping</h3>
+                        <p>Free delivery on orders over 500,000 VND nationwide.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <h3>Easy Returns</h3>
+                        <p>Hassle-free exchanges within 14 days of purchase.</p>
+                    </div>
+                    <div class="value-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <h3>Concierge Support</h3>
+                        <p>Dedicated customer care — 034 2230 2344.</p>
+                    </div>
+                </div>
+
+            </div>
+            
         </section>
     </main>
 
     <div id="footer"></div>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Data JS -->
-    <script src="js/products-data.js"></script>
-    <script src="js/brands-data.js"></script>
-
-    <!-- Common JS -->
     <script src="js/components.js"></script>
-    <script src="js/main.js"></script>
-
-    <!-- Page JS -->
-    <script src="js/home.js"></script>
-    <script src="js/cart.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/home.js"></script>
 </body>
 
 </html>

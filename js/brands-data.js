@@ -17,7 +17,7 @@ const brands = [
         slug: "nike",
         type: "sport",
         logo: "assets/images/brand/logo/nike-icon.png",
-        banner: "assets/images/brand/nike.webp",
+        banner: "assets/images/brand/nike.png",
         description: "Nike is a leading sportswear brand that provides performance footwear, sports clothing and lifestyle fashion products."
     },
 
@@ -27,7 +27,7 @@ const brands = [
         slug: "gucci",
         type: "luxury",
         logo: "assets/images/brand/logo/gucci-icon.png",
-        banner: "assets/images/brand/gucci.jpg",
+        banner: "assets/images/brand/gucci2.png",
         description: "Gucci is a luxury fashion brand recognised for premium design, high-quality clothing and distinctive fashion accessories."
     },
 
@@ -37,7 +37,7 @@ const brands = [
         slug: "ck",
         type: "luxury",
         logo: "assets/images/brand/logo/ck-icon.png",
-        banner: "assets/images/brand/ck.webp",
+        banner: "assets/images/brand/ck.png",
         description: "Calvin Klein is a modern fashion brand known for clean, minimal and stylish menswear products."
     },
 
@@ -57,7 +57,9 @@ const brands = [
         slug: "tommy",
         type: "casual",
         logo: "assets/images/brand/logo/tomy-icon.png",
-        banner: "assets/images/brand/tomy.jpg",
+        banner: "assets/images/brand/tomy2.png",
         description: "Tommy Hilfiger is a lifestyle fashion brand known for classic American style, casual clothing and modern menswear."
     }
 ];
+
+export default brands;
