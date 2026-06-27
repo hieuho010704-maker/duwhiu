@@ -225,7 +225,7 @@ window.addEventListener('storage', function(e) {
 });
 
 // ================= INIT =================
-document.addEventListener('DOMContentLoaded', function() {
+function initCart() {
     const cartToggle = document.getElementById('cartToggle');
     const miniCart = document.getElementById('miniCart');
     const overlay = document.getElementById('cartOverlay');
@@ -280,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     updateCartCount();
-});
+}
 
 // Export các hàm để dùng trong product-detail.js
-export { showToast, getCart, saveCart, updateCartCount };
+export { showToast, getCart, saveCart, updateCartCount, initCart };

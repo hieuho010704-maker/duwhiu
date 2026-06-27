@@ -46,7 +46,10 @@ function bindEvents(onUpdate) {
 function renderCartPage() {
     const container = document.getElementById('cartItems');
     const totalEl = document.getElementById('cartTotal');
+    const subtotalEl = document.getElementById('cartSubtotal');
+    const shippingEl = document.getElementById('cartShipping');
     const summaryEl = document.getElementById('cartSummary');
+    const headerEl = document.querySelector('.cart-table-header');
     const cart = getCart();
 
     if (!container) return;
@@ -57,17 +60,24 @@ function renderCartPage() {
                 <i class="fa-solid fa-bag-shopping"></i>
                 <h2>Your bag is empty</h2>
                 <p>Discover our curated collection of premium menswear.</p>
-                <a href="products.html" class="btn-luxury">Shop Collection</a>
+                <a href="products.html" class="btn-luxury mt-4">Shop Collection</a>
             </div>`;
         if (totalEl) totalEl.textContent = formatPrice(0);
         if (summaryEl) summaryEl.style.display = 'none';
+        if (headerEl) headerEl.style.display = 'none';
         return;
     }
 
+    if (headerEl) headerEl.style.display = '';
     container.innerHTML = cart.map((item, i) => createCartItemRow(item, i, 'page')).join('');
-    const { grandTotal } = calcGrandTotal(cart);
+    
+    const { subtotal, shipping, grandTotal } = calcGrandTotal(cart);
+    
+    if (subtotalEl) subtotalEl.textContent = formatPrice(subtotal);
+    if (shippingEl) shippingEl.textContent = shipping === 0 ? 'Free' : formatPrice(shipping);
     if (totalEl) totalEl.textContent = formatPrice(grandTotal);
     if (summaryEl) summaryEl.style.display = 'block';
+    
     bindEvents(renderCartPage);
 }
 

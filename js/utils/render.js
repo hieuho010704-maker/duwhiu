@@ -64,21 +64,29 @@ export function createCartItemRow(item, index, context = 'mini') {
     }
 
     return `
-        <div class="cart-item" data-index="${index}">
-            <img src="${item.image || 'assets/images/default-product.webp'}" alt="${item.name}">
-            <div class="cart-item-info">
-                <p class="item-name">${item.name}</p>
-                <p class="item-detail">${detail}</p>
-                <div class="cart-item-qty">
-                    <button class="qty-decrease" data-index="${index}">−</button>
-                    <span>${item.quantity}</span>
-                    <button class="qty-increase" data-index="${index}">+</button>
+        <div class="cart-page-item" data-index="${index}">
+            <div class="cart-page-item-product">
+                <a href="product-detail.html?id=${item.id}"><img src="${item.image || 'assets/images/default-product.webp'}" alt="${item.name}"></a>
+                <div class="cart-page-item-info">
+                    <h3 class="item-name"><a href="product-detail.html?id=${item.id}">${item.name}</a></h3>
+                    <p class="item-detail" style="margin-bottom: 4px; font-weight: 500; color: var(--gray-600);">${item.brand}</p>
+                    <p class="item-detail" style="color: var(--gray-500);">${detail}</p>
+                    <p class="item-unit-price d-md-none mt-2" style="font-weight: 600;">${formatPrice(item.price)}</p>
                 </div>
             </div>
-            <div class="cart-item-price">
-                <p class="item-price">${formatPrice(itemTotal)}</p>
+            <div class="cart-page-item-qty">
+                <div class="qty-control" style="display: flex; align-items: center; border: 1px solid var(--gray-300); padding: 5px 10px; gap: 15px; width: fit-content;">
+                    <button class="qty-decrease" data-index="${index}" style="background:none; border:none; font-size: 18px; cursor:pointer;">−</button>
+                    <span style="font-weight: 500;">${item.quantity}</span>
+                    <button class="qty-increase" data-index="${index}" style="background:none; border:none; font-size: 18px; cursor:pointer;">+</button>
+                </div>
             </div>
-            <button class="cart-item-remove" data-index="${index}">&times;</button>
+            <div class="cart-page-item-total">
+                <p class="item-price" style="font-weight: 600; font-size: 16px;">${formatPrice(itemTotal)}</p>
+            </div>
+            <div class="cart-page-item-action text-end">
+                <button class="cart-item-remove" data-index="${index}" aria-label="Remove item" style="background:none; border:none; font-size: 20px; color: var(--gray-500); cursor:pointer;"><i class="fa-solid fa-xmark"></i></button>
+            </div>
         </div>
     `;
 }

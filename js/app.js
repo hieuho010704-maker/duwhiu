@@ -1,8 +1,9 @@
 import { initLayout, updateCartCount } from './layout.js';
-import './cart.js';
+import { initCart } from './cart.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     initLayout();
+    initCart();
 });
 
 window.addEventListener('cartUpdated', updateCartCount);

@@ -22,15 +22,71 @@
 
     <!-- Nội dung riêng của từng trang -->
     <main>
-        <section class="cart-page">
+        <section class="luxury-cart-page">
             <div class="container">
-                <h1>Shopping Cart</h1>
+                <nav class="detail-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Shopping Bag</span>
+                </nav>
 
-                <div id="cartItems"></div>
+                <h1 class="page-title text-center mb-5" style="font-size: var(--text-4xl); font-family: 'Playfair Display', serif;">Shopping Bag</h1>
 
-                <div class="cart-summary">
-                    <h3>Total: <span id="cartTotal">0 VND</span></h3>
-                    <a href="payment.html" class="btn btn-dark">Proceed to Payment</a>
+                <div class="row cart-layout">
+                    <!-- Left: Cart Items -->
+                    <div class="col-lg-8 cart-items-col">
+                        <div class="cart-table-header d-none d-md-grid">
+                            <div class="th-product">Product</div>
+                            <div class="th-qty">Quantity</div>
+                            <div class="th-total">Total</div>
+                            <div class="th-action"></div>
+                        </div>
+                        <div id="cartItems" class="cart-items-container">
+                            <!-- Items go here -->
+                        </div>
+                        <div class="cart-continue mt-4">
+                            <a href="products.html" class="cart-continue-link" style="color: var(--black); text-decoration: underline;"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Summary -->
+                    <div class="col-lg-4 cart-summary-col">
+                        <div class="order-summary-box" id="cartSummary" style="display: none;">
+                            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 24px; font-size: var(--text-xl);">Order Summary</h2>
+                            <div class="summary-line">
+                                <span>Subtotal</span>
+                                <span id="cartSubtotal">0 VND</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Shipping</span>
+                                <span id="cartShipping">Calculated at next step</span>
+                            </div>
+                            <hr class="summary-divider">
+                            <div class="summary-line total-line">
+                                <span>Total</span>
+                                <span id="cartTotal">0 VND</span>
+                            </div>
+
+                            <div class="promo-code-box mt-4">
+                                <label for="promoCode" style="font-size: var(--text-sm); display:block; margin-bottom: 8px;">Promo Code</label>
+                                <div class="d-flex" style="gap: 10px;">
+                                    <input type="text" id="promoCode" class="form-control" placeholder="Enter code">
+                                    <button class="btn btn-dark" id="applyPromoBtn" style="border-radius: 0;">Apply</button>
+                                </div>
+                            </div>
+
+                            <a href="payment.html" class="btn-luxury w-100 mt-4 text-center d-block">Proceed to Checkout</a>
+                            
+                            <div class="secure-checkout text-center mt-4" style="color: var(--gray-600); font-size: var(--text-sm);">
+                                <i class="fa-solid fa-lock"></i> Secure Checkout
+                                <div class="mt-2" style="font-size: 24px; color: var(--gray-400);">
+                                    <i class="fa-brands fa-cc-visa me-2"></i>
+                                    <i class="fa-brands fa-cc-mastercard me-2"></i>
+                                    <i class="fa-brands fa-cc-paypal"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
