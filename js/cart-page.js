@@ -1,8 +1,9 @@
 import { getCart, saveCart } from './utils/storage.js';
 import { formatPrice } from './utils/format.js';
 import { showToast } from './utils/dom.js';
-import { createCartItemRow } from './utils/render.js';
+import { createCartItemRow, createProductCard } from './utils/render.js';
 import { calcGrandTotal } from './utils/pricing.js';
+import products from './products-data.js';
 
 function bindEvents(onUpdate) {
     const container = document.getElementById('cartItems');
@@ -81,4 +82,18 @@ function renderCartPage() {
     bindEvents(renderCartPage);
 }
 
-document.addEventListener('DOMContentLoaded', renderCartPage);
+function renderRecommended() {
+    const grid = document.getElementById('cartRecommendedGrid');
+    if (!grid) return;
+    
+    // Pick 4 random products for "You may also like"
+    const shuffled = [...products].sort(() => 0.5 - Math.random());
+    const recommended = shuffled.slice(0, 4);
+    
+    grid.innerHTML = recommended.map(p => createProductCard(p)).join('');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCartPage();
+    renderRecommended();
+});

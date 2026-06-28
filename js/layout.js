@@ -1,4 +1,4 @@
-import { getCart } from './utils/storage.js';
+import { getCart, getWishlist } from './utils/storage.js';
 
 export function loadHeader() {
     const header = document.getElementById('header');
@@ -19,6 +19,13 @@ export function updateCartCount() {
     if (!cartCount) return;
     const cart = getCart();
     cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+}
+
+export function updateWishlistCount() {
+    const wishlistCount = document.getElementById('wishlistCount');
+    if (!wishlistCount) return;
+    const wishlist = getWishlist();
+    wishlistCount.textContent = wishlist.length;
 }
 
 export function setupHeaderSearch() {
@@ -63,6 +70,7 @@ export function initLayout() {
     loadHeader();
     loadFooter();
     updateCartCount();
+    updateWishlistCount();
     setupHeaderSearch();
     setActiveMenu();
     updateAccountLink();

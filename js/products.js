@@ -1,4 +1,5 @@
 import products from "./products-data.js";
+import { createProductCard } from "./utils/render.js";
 
 // ================= PAGINATION CONFIG =================
 const ITEMS_PER_PAGE = 8;
@@ -88,35 +89,7 @@ function getFilteredProducts() {
 }
 
 // ================= CREATE PRODUCT CARD =================
-function createProductCard(product) {
-    const saleBadge = product.badge === "Sale" ? `<span class="product-badge sale">Sale</span>` : "";
-    const newBadge = product.badge === "New" ? `<span class="product-badge new">New</span>` : "";
-    const bestBadge = product.badge === "Best Seller" ? `<span class="product-badge best">Best Seller</span>` : "";
-    const oldPriceHTML = product.oldPrice > 0 ? `<span class="old-price">${formatPrice(product.oldPrice)}</span>` : "";
-
-    return `
-        <div class="col-lg-3 col-md-4 col-sm-6 mb-4 product-item">
-            <div class="product-card">
-                <div class="product-image">
-                    <a href="product-detail.html?id=${product.id}">
-                        <img src="${product.image}" alt="${product.name}" onerror="this.src='assets/images/default-product.webp'">
-                    </a>
-                    <div class="product-badges">${saleBadge}${newBadge}${bestBadge}</div>
-                </div>
-                <div class="product-info">
-                    <p class="product-brand">${product.brand}</p>
-                    <h3 class="product-name"><a href="product-detail.html?id=${product.id}">${product.name}</a></h3>
-                    <div class="product-rating"><i class="fa-solid fa-star"></i> ${product.rating}</div>
-                    <div class="product-price">
-                        <span class="current-price">${formatPrice(product.price)}</span>
-                        ${oldPriceHTML}
-                    </div>
-                    <a href="product-detail.html?id=${product.id}" class="product-btn">View Detail</a>
-                </div>
-            </div>
-        </div>
-    `;
-}
+// Using shared createProductCard from utils/render.js
 
 // ================= RENDER =================
 function renderProducts() {

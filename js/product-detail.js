@@ -1,5 +1,7 @@
 import products from './products-data.js';
 import { showToast, getCart, saveCart, updateCartCount } from './cart.js';
+import { getWishlist, toggleWishlist, isInWishlist } from './utils/storage.js';
+import { createProductCard } from './utils/render.js';
 
 // ================= UTILITY =================
 function formatPrice(price) {
@@ -36,24 +38,6 @@ function getColorHex(colorName) {
         'Coral': '#ff7f50'
     };
     return colorMap[colorName] || '#cccccc';
-}
-
-// ================= WISHLIST =================
-function getWishlist() {
-    return JSON.parse(localStorage.getItem('wishlist')) || [];
-}
-
-function toggleWishlist(productId) {
-    let wishlist = getWishlist();
-    const index = wishlist.indexOf(productId);
-    if (index > -1) wishlist.splice(index, 1);
-    else wishlist.push(productId);
-    localStorage.setItem('wishlist', JSON.stringify(wishlist));
-    return wishlist;
-}
-
-function isInWishlist(productId) {
-    return getWishlist().includes(productId);
 }
 
 // ================= RENDER PRODUCT DETAIL =================
@@ -333,9 +317,11 @@ function renderProductDetail() {
 
     // 6. Wishlist
     document.getElementById('wishlistBtn').addEventListener('click', function() {
-        toggleWishlist(product.id);
+        const currentWishlist = toggleWishlist(product.id);
+        const isFav = currentWishlist.includes(product.id);
+        
         const icon = this.querySelector('i');
-        if (icon.classList.contains('fa-regular')) {
+        if (isFav) {
             icon.classList.remove('fa-regular');
             icon.classList.add('fa-solid');
             showToast('Added to wishlist! ❤️', 'success');
@@ -344,6 +330,10 @@ function renderProductDetail() {
             icon.classList.add('fa-regular');
             showToast('Removed from wishlist.', 'info');
         }
+        
+        // Dispatch events to update global UI
+        window.dispatchEvent(new CustomEvent('wishlistUpdated', { detail: { productId: product.id, isFav } }));
+        window.dispatchEvent(new StorageEvent('storage', { key: 'wishlist' }));
     });
 
     // 7. Add to Cart (GỌI SHOWTOAST TỪ CART.JS)
@@ -423,17 +413,7 @@ function renderRelatedProducts(product) {
         return;
     }
 
-    grid.innerHTML = related.map(p => `
-        <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
-            <div class="related-card">
-                <a href="product-detail.html?id=${p.id}">
-                    <img src="${p.image || 'assets/images/default-product.webp'}" alt="${p.name}">
-                    <h4>${p.name}</h4>
-                    <p class="related-price">${formatPrice(p.price)}</p>
-                </a>
-            </div>
-        </div>
-    `).join('');
+    grid.innerHTML = related.map(p => createProductCard(p)).join('');
 }
 
 // ================= INIT =================

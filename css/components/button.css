@@ -1,0 +1,55 @@
+/* ==========================================================================
+   #BUTTON COMPONENT
+   ========================================================================== */
+
+.btn-luxury {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 32px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    border: 1px solid var(--color-black);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-luxury::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left var(--transition-slow);
+    z-index: -1;
+}
+
+.btn-luxury:hover {
+    background-color: var(--color-accent-gold);
+    border-color: var(--color-accent-gold);
+    color: var(--color-white);
+}
+
+.btn-luxury:hover::before {
+    left: 100%;
+}
+
+.btn-luxury--outline {
+    background-color: transparent;
+    color: var(--color-black);
+}
+
+.btn-luxury--outline:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}

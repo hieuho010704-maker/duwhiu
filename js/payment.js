@@ -76,12 +76,19 @@ function renderOrderSummary() {
         const itemTotal = item.price * item.quantity;
         subtotal += itemTotal;
         html += `
-            <div class="order-item">
-                <img src="${item.image || 'assets/images/default-product.webp'}" alt="${item.name}">
-                <div class="order-item-info">
-                    <p class="item-name">${item.name}</p>
-                    <p class="item-detail">${item.brand} ${item.size ? '| ' + item.size : ''} ${item.color ? '| ' + item.color : ''} x${item.quantity}</p>
-                    <p class="item-price">${formatPrice(itemTotal)}</p>
+            <div class="summary-item" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; padding: 16px; border: 1px solid var(--color-gray-200); border-radius: 12px; background: var(--color-white); position: relative;">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <div style="width: 80px; height: 80px; border-radius: 8px; background: var(--color-gray-100); display: flex; justify-content: center; align-items: center; overflow: hidden;">
+                        <img src="${item.image || 'assets/images/default-product.webp'}" alt="${item.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div>
+                        <div style="font-weight: 700; font-size: 15px; color: var(--color-black); margin-bottom: 4px; padding-right: 24px;">${item.name}</div>
+                        <div style="font-size: 13px; color: var(--color-gray-500); margin-bottom: 8px;">${item.brand} ${item.size ? '| ' + item.size : ''} ${item.color ? '| ' + item.color : ''}</div>
+                        <div style="font-size: 13px; font-weight: 500; color: var(--color-gray-600); background: var(--color-gray-100); padding: 4px 10px; border-radius: 20px; display: inline-block;">Qty ${item.quantity} <i class="fa-solid fa-chevron-down ms-1" style="font-size: 10px;"></i></div>
+                    </div>
+                </div>
+                <div style="font-weight: 700; font-size: 16px; color: var(--color-black); align-self: flex-end;">
+                    ${formatPrice(itemTotal)}
                 </div>
             </div>
         `;

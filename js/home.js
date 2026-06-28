@@ -33,15 +33,20 @@ function renderNewArrivals() {
     const container = document.getElementById('newArrivals');
     if (!container) return;
 
-    const items = products.filter(p => p.badge === 'New').slice(0, 4);
-    container.innerHTML = items.map(p => createProductCard(p, { compact: true })).join('');
+    // Fetch 8 items for New Arrivals and duplicate to make seamless marquee
+    const items = products.filter(p => p.badge === 'New').slice(0, 8);
+    const infiniteItems = [...items, ...items];
+    container.innerHTML = infiniteItems.map(p => createProductCard(p, { compact: true, isMarquee: true })).join('');
 }
 
 function renderBrandStrip() {
     const container = document.getElementById('homeBrandStrip');
     if (!container) return;
 
-    container.innerHTML = brands.map(b => `
+    // Duplicate brands array 3 times to create a seamless infinite scrolling width
+    const infiniteBrands = [...brands, ...brands, ...brands];
+
+    container.innerHTML = infiniteBrands.map(b => `
         <a href="brand-detail.html?brand=${encodeURIComponent(b.name)}" class="brand-strip-item">
             <img src="${b.logo}" alt="${b.name}" loading="lazy">
         </a>

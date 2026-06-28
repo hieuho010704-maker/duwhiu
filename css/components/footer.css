@@ -1,0 +1,204 @@
+/* ==========================================================================
+   #FOOTER COMPONENT
+   ========================================================================== */
+
+/* 
+   BEM Block: .main-footer 
+*/
+.main-footer {
+    background-color: #0a0a0a; /* Pitch black */
+    color: var(--color-white);
+    padding: var(--spacing-2xl) 0 0 0;
+}
+
+.main-footer__container {
+    padding-bottom: var(--spacing-xl);
+}
+
+/* 
+   BEM Block: .footer-column 
+*/
+.footer-column {
+    margin-bottom: var(--spacing-lg);
+}
+
+.footer-column h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-2xl);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
+}
+
+.footer-column h4 {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-white);
+}
+
+.footer-column p {
+    color: var(--color-gray-400);
+    font-size: var(--text-sm);
+    line-height: var(--line-height-relaxed);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: var(--spacing-sm);
+}
+
+.footer-column ul li a {
+    color: var(--color-gray-400);
+    font-size: var(--text-sm);
+    transition: color var(--transition-fast);
+}
+
+.footer-column ul li a:hover {
+    color: var(--color-white);
+}
+
+/* 
+   BEM Block: .footer-socials 
+*/
+.footer-socials {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--color-white);
+    transition: all var(--transition-fast);
+}
+
+/* Signature Colors for Social Icons (Always Visible) */
+.social-icon:has(.fa-facebook-f) {
+    background-color: #1877F2;
+    border-color: #1877F2;
+    color: #ffffff;
+}
+
+.social-icon:has(.fa-instagram) {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border-color: transparent;
+    color: #ffffff;
+}
+
+.social-icon:has(.fa-tiktok) {
+    background-color: #000000;
+    border-color: #333333;
+    color: #ffffff;
+}
+
+.social-icon:has(.fa-linkedin-in) {
+    background-color: #0077b5;
+    border-color: #0077b5;
+    color: #ffffff;
+}
+
+/* Hover state for all social icons */
+.social-icon:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    filter: brightness(1.2);
+}
+
+/* 
+   BEM Block: .footer-bottom 
+*/
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--spacing-md) 0;
+    margin-top: var(--spacing-xl);
+}
+
+.footer-bottom__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-bottom__copyright {
+    color: var(--color-gray-500);
+    font-size: var(--text-xs);
+    margin: 0;
+}
+
+.footer-payments {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-lg);
+    width: 100%;
+}
+
+.payment-icons-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: 4px;
+}
+
+.footer-payments i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.footer-payments i:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Signature Colors for Payment Icons */
+.footer-payments i.fa-cc-visa { color: #ffffff; } /* Clean white for Visa */
+.footer-payments i.fa-wallet { color: #A50064; } /* Momo Pink */
+.footer-payments i.fa-qrcode { color: #008fe5; } /* ZaloPay Blue */
+.footer-payments i.fa-money-bill-wave { color: #009e60; }
+
+.payment-label {
+    font-size: var(--text-xs);
+    color: var(--color-gray-500);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing-wide);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Signature Colors for Footer Contact Icons */
+.footer-column p i.fa-map-pin { color: #EA4335; } /* Google Red */
+.footer-column p i.fa-square-phone { color: #34A853; } /* Green */
+.footer-column p i.fa-square-envelope { color: #4285F4; } /* Blue */
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .footer-bottom__content {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--spacing-md);
+    }
+}

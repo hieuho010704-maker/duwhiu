@@ -112,20 +112,23 @@ function renderMiniCart() {
 
         html += `
             <div class="cart-item" data-index="${index}">
-                <img src="${item.image || 'assets/images/default-product.webp'}" alt="${item.name}">
+                <div class="cart-item-img-wrapper">
+                    <img src="${item.image || 'assets/images/default-product.webp'}" alt="${item.name}">
+                </div>
                 <div class="cart-item-info">
-                    <p class="item-name">${item.name}</p>
-                    <p class="item-detail">${item.brand} ${item.size ? '| ' + item.size : ''} ${item.color ? '| ' + item.color : ''}</p>
+                    <p class="item-brand">${item.brand}</p>
+                    <p class="item-name" title="${item.name}">${item.name}</p>
+                    <p class="item-detail">${item.size ? 'Size: ' + item.size : ''} ${item.color ? (item.size ? ' | ' : '') + 'Color: ' + item.color : ''}</p>
                     <div class="cart-item-qty">
-                        <button class="qty-decrease" data-index="${index}">−</button>
+                        <button class="qty-decrease" data-index="${index}">-</button>
                         <span>${item.quantity}</span>
                         <button class="qty-increase" data-index="${index}">+</button>
                     </div>
                 </div>
-                <div class="cart-item-price">
+                <div class="cart-item-actions">
+                    <button class="cart-item-remove" data-index="${index}">&times;</button>
                     <p class="item-price">${formatPrice(itemTotal)}</p>
                 </div>
-                <button class="cart-item-remove" data-index="${index}">&times;</button>
             </div>
         `;
     });

@@ -1,392 +1,387 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Men's Wear</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/luxury-global.css">
-</head>
-
-<body>
-
-    <div id="header"></div>
-
-    <main>
-
-
-        <section class="luxury-hero">
-            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
-
-                <div class="carousel-indicators hero-dots">
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active hero-dot" aria-current="true" aria-label="Product"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" class="hero-dot" aria-label="Topwear"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" class="hero-dot" aria-label="Bottomwear"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" class="hero-dot" aria-label="Shoes and Sandals"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" class="hero-dot" aria-label="Accessories"></button>
-                </div>
-
-                <div class="carousel-inner">
-
-                    <!-- Slide 1: All Products -->
-                    <div class="carousel-item active hero-slide" style="background-image: url('assets/images/banner/product.png')">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1>Men's Wear</h1>
-                            <p>Explore our full men’s fashion collection from selected modern brands.</p>
-                            <a href="products.html" class="btn-luxury">View All Products</a>
-                        </div>
-                    </div>
-
-                    <!-- Slide 2: Topwear -->
-                    <div class="carousel-item hero-slide" style="background-image: url('assets/images/banner/tops.png')">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1>Tops</h1>
-                            <p>Explore t-shirts, polo shirts, shirts, jackets, sweaters and hoodies.</p>
-                            <a href="products.html?category=topwear" class="btn-luxury" data-category="topwear" data-target="topwear">Shop Topwear</a>
-                        </div>
-                    </div>
-
-                    <!-- Slide 3: Bottomwear -->
-                    <div class="carousel-item hero-slide" style="background-image: url('assets/images/banner/bottoms.png')">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1>Bottoms</h1>
-                            <p>Discover jeans, shorts, kaki pants and trousers for modern men.</p>
-                            <a href="products.html?category=bottomwear" class="btn-luxury" data-category="bottomwear" data-target="bottomwear">Shop Bottomwear</a>
-                        </div>
-                    </div>
-
-                    <!-- Slide 4: Shoes & Sandals -->
-                    <div class="carousel-item hero-slide" style="background-image: url('assets/images/banner/Sandal.png')">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1>Shoes & Sandals</h1>
-                            <p>Find dress shoes, sport shoes and sandals for every outfit.</p>
-                            <a href="products.html?category=footwear" class="btn-luxury" data-category="footwear" data-target="footwear">Shop Footwear</a>
-                        </div>
-                    </div>
-
-                    <!-- Slide 5: Accessories -->
-                    <div class="carousel-item hero-slide" style="background-image: url('assets/images/banner/phukien1.png')">
-                        <div class="hero-overlay"></div>
-                        <div class="hero-content">
-                            <h1>Accessory</h1>
-                            <p>Complete your look with backpacks, hats, belts, socks and glasses.</p>
-                            <a href="products.html?category=accessories" class="btn-luxury" data-category="accessories" data-target="accessories">Shop Accessories</a>
-                        </div>
-                    </div>
-
-                </div>
-
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-
-                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-
-            </div>
-        </section>
-
-        <section class="product-categories-nav">
-            <div class="container">
-                <!-- All Product -->
-                <a href="#all" class="category-nav-card" data-category="all">
-                    <img src="assets/icon/all-product.png" alt="All Product">
-                    <span>All Product</span>
-                </a>
-                <!-- Tops -->
-                <a href="#topwear" class="category-nav-card" data-category="topwear">
-                    <img src="assets/icon/tops-icon.png" alt="Topwear">
-                    <span>Tops</span>
-                </a>
-                <!-- Bottoms -->
-                <a href="#bottomwear" class="category-nav-card" data-category="bottomwear">
-                    <img src="assets/icon/bottoms-icon.png" alt="Bottomwear">
-                    <span>Bottoms</span>
-                </a>
-                <!-- Shoes -->
-                <a href="#footwear" class="category-nav-card" data-category="footwear">
-                    <img src="assets/icon/shoes.png" alt="Footwear">
-                    <span>Shoes</span>
-                </a>
-                <!-- Accessory -->
-                <a href="#accessories" class="category-nav-card" data-category="accessories">
-                    <img src="assets/icon/accessories-icon.png" alt="Accessories">
-                    <span>Accessory</span>
-                </a>
-            </div>
-        </section>
-
-
-        <!-- ===================== PRODUCTS + FILTER ===================== -->
-        <section class="products-section">
-            <div class="container">
-                <div class="row">
-
-                    <!-- ===== FILTER SIDEBAR ===== -->
-                    <aside class="col-lg-3 filter-sidebar">
-                        <h3>🛒 Product Filters</h3>
-                        <!-- Special Filters (New, Sale, Best Seller) -->
-                        <div class="filter-group">
-                            <h4>Special</h4>
-                            <ul>
-                                <li>
-                                    <label> <input type="checkbox" class="filter-checkbox" data-filter="filter"
-                                            value="new">
-                                        New product </label>
-                                </li>
-                                <li>
-                                    <label><input type="checkbox" class="filter-checkbox" data-filter="filter"
-                                            value="sale"> Product Sale </label>
-                                </li>
-                                <li>
-                                    <label> <input type="checkbox" class="filter-checkbox" data-filter="filter"
-                                            value="best-seller"> Best Seller </label>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Category -->
-                        <div class="filter-group">
-                            <h4>Category</h4>
-                            <ul>
-                                <li><label><input type="checkbox" class="filter-checkbox" data-filter="category"
-                                            value="topwear"> Topwear</label></li>
-                                <li><label><input type="checkbox" class="filter-checkbox" data-filter="category"
-                                            value="bottomwear"> Bottomwear</label></li>
-                                <li><label><input type="checkbox" class="filter-checkbox" data-filter="category"
-                                            value="footwear"> Footwear</label></li>
-                                <li><label><input type="checkbox" class="filter-checkbox" data-filter="category"
-                                            value="accessories"> Accessories</label></li>
-                            </ul>
-                        </div>
-
-                        <div class="filter-group">
-                            <h4>Brand</h4>
-                            <div class="filter-grid brand-grid">
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand"
-                                        value="Adidas"> Adidas</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Nike">
-                                    Nike</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand"
-                                        value="Levi's"> Levi's</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand"
-                                        value="Tommy Hilfiger"> Tommy Hilfiger</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand"
-                                        value="Calvin Klein"> Calvin Klein</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Gucci">
-                                    Gucci</label>
-                            </div>
-                        </div>
-
-                        <!-- Price (checkbox, chỉ chọn 1 nhờ JS) -->
-                        <div class="filter-group">
-                            <h4>Price Range</h4>
-                            <ul class="price-list">
-                                <li><label><input type="checkbox" class="price-checkbox" data-filter="price"
-                                            value="under1m"> Under 1,000,000 VND</label></li>
-                                <li><label><input type="checkbox" class="price-checkbox" data-filter="price"
-                                            value="1to3m"> 1,000,000 – 3,000,000 VND</label></li>
-                                <li><label><input type="checkbox" class="price-checkbox" data-filter="price"
-                                            value="3to5m"> 3,000,000 – 5,000,000 VND</label></li>
-                                <li><label><input type="checkbox" class="price-checkbox" data-filter="price"
-                                            value="over5m"> Over 5,000,000 VND</label></li>
-                            </ul>
-                        </div>
-
-                        <!-- Size (nằm ngang) -->
-                        <div class="filter-group">
-                            <h4>Size</h4>
-                            <div class="filter-grid horizontal">
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="S">
-                                    S</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="M">
-                                    M</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="L">
-                                    L</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="XL">
-                                    XL</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="39">
-                                    39</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="40">
-                                    40</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="41">
-                                    41</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="42">
-                                    42</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="43">
-                                    43</label>
-                            </div>
-                        </div>
-
-                        <!-- Color (nằm ngang) -->
-                        <div class="filter-group">
-                            <h4>Color</h4>
-                            <div class="filter-grid brand-grid">
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Black">
-                                    Black</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="White">
-                                    White</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Blue">
-                                    Blue</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Navy">
-                                    Navy</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Khaki">
-                                    Khaki</label>
-                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Grey">
-                                    Grey</label>
-                            </div>
-                        </div>
-
-                        <button id="clearFiltersBtn" class="clear-filter-btn">Clear All Filters</button>
-                    </aside>
-
-                    <!-- ===== PRODUCT LIST ===== -->
-                    <div class="col-lg-9 product-list-container">
-                        <div id="productCount" class="product-result-info">
-                            Showing <span id="countNumber">0</span> products
-                        </div>
-                        <div id="productsList" class="row">
-                            <!-- Products rendered by JavaScript -->
-                        </div>
-                        <!-- Phân trang -->
-                        <div id="paginationControls" class="mt-4 d-flex justify-content-center">
-                            <!-- Các nút trang sẽ được JavaScript tạo ra -->
-                        </div>
-                    </div>
-
-
-                </div> <!-- end row -->
-            </div> <!-- end container -->
-        </section>
-
-
-
-
-
-
-
-        <!-- ===== BRAND STORY ===== -->
-        <section class="brand-story-section">
-            <div class="container">
-                <div class="brand-story-grid">
-                    <!-- Left Side: Editorial Image -->
-                    <div class="brand-story-image-wrap">
-                        <img src="assets/images/logo/logo.png" alt="Men's Wear Editorial Story" class="brand-story-img">
-                        <div class="image-overlay-accent"></div>
-                    </div>
-                    
-                    <!-- Right Side: Content -->
-                    <div class="brand-story-content-wrap">
-                        <div class="story-header">
-                            <span class="story-subtitle">Our Philosophy</span>
-                            <h2>Men's Wear</h2>
-                            <p class="story-desc">
-                                Premium men's fashion – curated from the world's best brands.
-                                Style that speaks for itself.
-                            </p>
-                        </div>
-
-                        <div class="story-body">
-                            <p class="story-excerpt">
-                                Men's Wear brings you timeless style, modern quality, and unmatched elegance. 
-                                We believe that dressing well is a form of self-respect, and our collections are curated 
-                                to help every man express his unique character and confidence.
-                            </p>
-                            <p class="story-subexcerpt">
-                                From premium Italian tailored suits and luxury footwear to casual streetwear staples, 
-                                we handpick only the finest pieces from the world's leading fashion houses, including Adidas, 
-                                Calvin Klein, Levi's, and Gucci.
-                            </p>
-
-                            <div class="story-full" id="storyFull">
-                                <p>
-                                    We believe fashion is more than just clothes – it's confidence, identity, and self-expression.
-                                    That's why we partner with the world's most trusted brands to bring you collections that
-                                    are as authentic as they are stylish. We focus on premium fabrics, immaculate craftsmanship, and 
-                                    modern silhouettes that fit seamlessly into the dynamic lifestyle of today's gentleman.
-                                </p>
-                                <p>
-                                    Our team works tirelessly to ensure every item in our store meets the highest standards
-                                    of quality, durability, and design. We understand that modern men value both form and function –
-                                    which is why our selections offer both luxury comfort and high-end aesthetic appeal for any occasion, 
-                                    from the boardroom to weekend getaways.
-                                </p>
-                                <p>
-                                    By building a curated destination for men's fashion, we aim to simplify the styling process 
-                                    while raising the bar for luxury retail. Experience clothing that is made to last and designed to define.
-                                </p>
-                                <div class="story-features">
-                                    <div class="feature-item">
-                                        <span class="feature-icon"><i class="fa-solid fa-check"></i></span>
-                                        <div class="feature-text">
-                                            <strong>100% Authentic</strong>
-                                            <span>Guaranteed genuine products from official partners.</span>
-                                        </div>
-                                    </div>
-                                    <div class="feature-item">
-                                        <span class="feature-icon"><i class="fa-solid fa-check"></i></span>
-                                        <div class="feature-text">
-                                            <strong>Fast & Free Shipping</strong>
-                                            <span>Delivered within 2–3 business days.</span>
-                                        </div>
-                                    </div>
-                                    <div class="feature-item">
-                                        <span class="feature-icon"><i class="fa-solid fa-check"></i></span>
-                                        <div class="feature-text">
-                                            <strong>Easy Returns</strong>
-                                            <span>Hassle-free exchanges and full refunds.</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button class="story-btn" id="storyToggle">
-                                <span id="storyBtnText">Read More</span>
-                                <i class="fa-solid fa-chevron-down" id="storyBtnIcon"></i>
-                            </button>
-                        </div>
-
-                        <div class="story-social">
-                            <span class="social-label">Follow Us</span>
-                            <div class="social-icons">
-                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-   
-
-    
-    <div id="footer"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="js/components.js"></script>
-    <script type="module" src="js/main.js"></script>
-
-    <script type="module" src="js/products.js"></script>
-</body>
-
-</html>
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Men's Wear</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom CSS Architecture -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main>
+
+
+        <section class="hero">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+
+                <div class="carousel-indicators hero-dots">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active hero-dot" aria-current="true" aria-label="Product"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" class="hero-dot" aria-label="Topwear"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" class="hero-dot" aria-label="Bottomwear"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" class="hero-dot" aria-label="Shoes and Sandals"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4" class="hero-dot" aria-label="Accessories"></button>
+                </div>
+
+                <div class="carousel-inner">
+
+                    <!-- Slide 1: All Products -->
+                    <div class="carousel-item active hero__slide" style="background-image: url('assets/images/banner/product.png')">
+                        <div class="hero__overlay"></div>
+                        <div class="hero__content">`n                            <h1 class="hero__title">Men's Wear</h1>
+                            <p class="hero__text">Explore our full men’s fashion collection from selected modern brands.</p>
+                            <a href="products.html" class="btn-luxury">View All Products</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Topwear -->
+                    <div class="carousel-item hero__slide" style="background-image: url('assets/images/banner/tops.png')">
+                        <div class="hero__overlay"></div>
+                        <div class="hero__content">`n                            <h1 class="hero__title">Tops</h1>
+                            <p class="hero__text">Explore t-shirts, polo shirts, shirts, jackets, sweaters and hoodies.</p>
+                            <a href="products.html?category=topwear" class="btn-luxury" data-category="topwear" data-target="topwear">Shop Topwear</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Bottomwear -->
+                    <div class="carousel-item hero__slide" style="background-image: url('assets/images/banner/bottoms.png')">
+                        <div class="hero__overlay"></div>
+                        <div class="hero__content">`n                            <h1 class="hero__title">Bottoms</h1>
+                            <p class="hero__text">Discover jeans, shorts, kaki pants and trousers for modern men.</p>
+                            <a href="products.html?category=bottomwear" class="btn-luxury" data-category="bottomwear" data-target="bottomwear">Shop Bottomwear</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Shoes & Sandals -->
+                    <div class="carousel-item hero__slide" style="background-image: url('assets/images/banner/Sandal.png')">
+                        <div class="hero__overlay"></div>
+                        <div class="hero__content">`n                            <h1 class="hero__title">Shoes & Sandals</h1>
+                            <p class="hero__text">Find dress shoes, sport shoes and sandals for every outfit.</p>
+                            <a href="products.html?category=footwear" class="btn-luxury" data-category="footwear" data-target="footwear">Shop Footwear</a>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5: Accessories -->
+                    <div class="carousel-item hero__slide" style="background-image: url('assets/images/banner/phukien1.png')">
+                        <div class="hero__overlay"></div>
+                        <div class="hero__content">`n                            <h1 class="hero__title">Accessory</h1>
+                            <p class="hero__text">Complete your look with backpacks, hats, belts, socks and glasses.</p>
+                            <a href="products.html?category=accessories" class="btn-luxury" data-category="accessories" data-target="accessories">Shop Accessories</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+
+            </div>
+        </section>
+
+        <section class="product-categories-nav">
+            <div class="container">
+                <!-- All Product -->
+                <a href="#all" class="category-nav-card" data-category="all">
+                    <img src="assets/icon/all-product.png" alt="All Product">
+                    <span>All Product</span>
+                </a>
+                <!-- Tops -->
+                <a href="#topwear" class="category-nav-card" data-category="topwear">
+                    <img src="assets/icon/tops-icon.png" alt="Topwear">
+                    <span>Tops</span>
+                </a>
+                <!-- Bottoms -->
+                <a href="#bottomwear" class="category-nav-card" data-category="bottomwear">
+                    <img src="assets/icon/bottoms-icon.png" alt="Bottomwear">
+                    <span>Bottoms</span>
+                </a>
+                <!-- Shoes -->
+                <a href="#footwear" class="category-nav-card" data-category="footwear">
+                    <img src="assets/icon/shoes.png" alt="Footwear">
+                    <span>Shoes</span>
+                </a>
+                <!-- Accessory -->
+                <a href="#accessories" class="category-nav-card" data-category="accessories">
+                    <img src="assets/icon/accessories-icon.png" alt="Accessories">
+                    <span>Accessory</span>
+                </a>
+            </div>
+        </section>
+
+
+        <!-- ===================== PRODUCTS + FILTER ===================== -->
+        <section class="products-page">
+            <div class="container">
+                <div class="row">
+
+                    <!-- ===== FILTER SIDEBAR ===== -->
+                    <aside class="col-lg-3 filter-sidebar">
+                        <h3>🛒 Product Filters</h3>
+                        <!-- Special Filters (New, Sale, Best Seller) -->
+                        <div class="filter-group">
+                            <h4>Special</h4>
+                            <ul>
+                                <li>
+                                    <label> <input type="checkbox" class="filter-checkbox" data-filter="filter"
+                                            value="new">
+                                        New product </label>
+                                </li>
+                                <li>
+                                    <label><input type="checkbox" class="filter-checkbox" data-filter="filter"
+                                            value="sale"> Product Sale </label>
+                                </li>
+                                <li>
+                                    <label> <input type="checkbox" class="filter-checkbox" data-filter="filter"
+                                            value="best-seller"> Best Seller </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="filter-group">
+                            <h4>Category</h4>
+                            <ul>
+                                <li><label><input type="checkbox" class="filter-checkbox" data-filter="category"
+                                            value="topwear"> Topwear</label></li>
+                                <li><label><input type="checkbox" class="filter-checkbox" data-filter="category"
+                                            value="bottomwear"> Bottomwear</label></li>
+                                <li><label><input type="checkbox" class="filter-checkbox" data-filter="category"
+                                            value="footwear"> Footwear</label></li>
+                                <li><label><input type="checkbox" class="filter-checkbox" data-filter="category"
+                                            value="accessories"> Accessories</label></li>
+                            </ul>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Brand</h4>
+                            <div class="filter-grid brand-grid">
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand"
+                                        value="Adidas"> Adidas</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Nike">
+                                    Nike</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand"
+                                        value="Levi's"> Levi's</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand"
+                                        value="Tommy Hilfiger"> Tommy Hilfiger</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand"
+                                        value="Calvin Klein"> Calvin Klein</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="brand" value="Gucci">
+                                    Gucci</label>
+                            </div>
+                        </div>
+
+                        <!-- Price (checkbox, chỉ chọn 1 nhờ JS) -->
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <ul class="price-list">
+                                <li><label><input type="checkbox" class="price-checkbox" data-filter="price"
+                                            value="under1m"> Under 1,000,000 VND</label></li>
+                                <li><label><input type="checkbox" class="price-checkbox" data-filter="price"
+                                            value="1to3m"> 1,000,000 – 3,000,000 VND</label></li>
+                                <li><label><input type="checkbox" class="price-checkbox" data-filter="price"
+                                            value="3to5m"> 3,000,000 – 5,000,000 VND</label></li>
+                                <li><label><input type="checkbox" class="price-checkbox" data-filter="price"
+                                            value="over5m"> Over 5,000,000 VND</label></li>
+                            </ul>
+                        </div>
+
+                        <!-- Size (nằm ngang) -->
+                        <div class="filter-group">
+                            <h4>Size</h4>
+                            <div class="filter-grid horizontal">
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="S">
+                                    S</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="M">
+                                    M</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="L">
+                                    L</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="XL">
+                                    XL</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="39">
+                                    39</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="40">
+                                    40</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="41">
+                                    41</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="42">
+                                    42</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="size" value="43">
+                                    43</label>
+                            </div>
+                        </div>
+
+                        <!-- Color (nằm ngang) -->
+                        <div class="filter-group">
+                            <h4>Color</h4>
+                            <div class="filter-grid brand-grid">
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Black">
+                                    Black</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="White">
+                                    White</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Blue">
+                                    Blue</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Navy">
+                                    Navy</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Khaki">
+                                    Khaki</label>
+                                <label><input type="checkbox" class="filter-checkbox" data-filter="color" value="Grey">
+                                    Grey</label>
+                            </div>
+                        </div>
+
+                        <button id="clearFiltersBtn" class="clear-filter-btn">Clear All Filters</button>
+                    </aside>
+
+                    <!-- ===== PRODUCT LIST ===== -->
+                    <div class="col-lg-9 product-list-container">
+                        <div id="productCount" class="product-result-info">
+                            Showing <span id="countNumber">0</span> products
+                        </div>
+                        <div id="productsList" class="row">
+                            <!-- Products rendered by JavaScript -->
+                        </div>
+                        <!-- Phân trang -->
+                        <div id="paginationControls" class="mt-4 d-flex justify-content-center">
+                            <!-- Các nút trang sẽ được JavaScript tạo ra -->
+                        </div>
+                    </div>
+
+
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
+
+
+
+
+
+
+
+        <!-- ===== BRAND STORY ===== -->
+        <section class="brand-story-section">
+            <div class="container">
+                <div class="brand-story-grid">
+                    <!-- Left Side: Editorial Image -->
+                    <div class="brand-story-image-wrap">
+                        <img src="assets/images/logo/logo.png" alt="Men's Wear Editorial Story" class="brand-story-img">
+                        <div class="image-overlay-accent"></div>
+                    </div>
+                    
+                    <!-- Right Side: Content -->
+                    <div class="brand-story-content-wrap">
+                        <div class="story-header">
+                            <span class="story-subtitle">Our Philosophy</span>
+                            <h2>Men's Wear</h2>
+                            <p class="story-desc">
+                                Premium men's fashion – curated from the world's best brands.
+                                Style that speaks for itself.
+                            </p>
+                        </div>
+
+                        <div class="story-body">
+                            <p class="story-excerpt">
+                                Men's Wear brings you timeless style, modern quality, and unmatched elegance. 
+                                We believe that dressing well is a form of self-respect, and our collections are curated 
+                                to help every man express his unique character and confidence.
+                            </p>
+                            <p class="story-subexcerpt">
+                                From premium Italian tailored suits and luxury footwear to casual streetwear staples, 
+                                we handpick only the finest pieces from the world's leading fashion houses, including Adidas, 
+                                Calvin Klein, Levi's, and Gucci.
+                            </p>
+
+                            <div class="story-full" id="storyFull">
+                                <p>
+                                    We believe fashion is more than just clothes – it's confidence, identity, and self-expression.
+                                    That's why we partner with the world's most trusted brands to bring you collections that
+                                    are as authentic as they are stylish. We focus on premium fabrics, immaculate craftsmanship, and 
+                                    modern silhouettes that fit seamlessly into the dynamic lifestyle of today's gentleman.
+                                </p>
+                                <p>
+                                    Our team works tirelessly to ensure every item in our store meets the highest standards
+                                    of quality, durability, and design. We understand that modern men value both form and function –
+                                    which is why our selections offer both luxury comfort and high-end aesthetic appeal for any occasion, 
+                                    from the boardroom to weekend getaways.
+                                </p>
+                                <p>
+                                    By building a curated destination for men's fashion, we aim to simplify the styling process 
+                                    while raising the bar for luxury retail. Experience clothing that is made to last and designed to define.
+                                </p>
+                                <div class="story-features">
+                                    <div class="feature-item">
+                                        <span class="feature-icon"><i class="fa-solid fa-check"></i></span>
+                                        <div class="feature-text">
+                                            <strong>100% Authentic</strong>
+                                            <span>Guaranteed genuine products from official partners.</span>
+                                        </div>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon"><i class="fa-solid fa-check"></i></span>
+                                        <div class="feature-text">
+                                            <strong>Fast & Free Shipping</strong>
+                                            <span>Delivered within 2–3 business days.</span>
+                                        </div>
+                                    </div>
+                                    <div class="feature-item">
+                                        <span class="feature-icon"><i class="fa-solid fa-check"></i></span>
+                                        <div class="feature-text">
+                                            <strong>Easy Returns</strong>
+                                            <span>Hassle-free exchanges and full refunds.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button class="story-btn" id="storyToggle">
+                                <span id="storyBtnText">Read More</span>
+                                <i class="fa-solid fa-chevron-down" id="storyBtnIcon"></i>
+                            </button>
+                        </div>
+
+                        <div class="story-social">
+                            <span class="social-label">Follow Us</span>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+   
+
+    
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/components.js"></script>
+    <script type="module" src="js/main.js"></script>
+
+    <script type="module" src="js/products.js"></script>
+</body>
+
+</html>
+
+
+

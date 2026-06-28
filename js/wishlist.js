@@ -57,3 +57,10 @@ window.addEventListener('wishlistUpdated', (e) => {
         }
     }
 });
+
+// Sync from other tabs
+window.addEventListener('storage', (e) => {
+    if (e.key === 'wishlist') {
+        renderWishlist();
+    }
+});

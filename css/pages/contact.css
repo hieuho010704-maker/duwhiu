@@ -1,0 +1,153 @@
+/* ==========================================================================
+   #CONTACT PAGE
+   ========================================================================== */
+
+.contact-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-black);
+    margin-bottom: 8px;
+}
+
+.input-with-icon {
+    position: relative;
+    width: 100%;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-gray-500);
+    font-size: 14px;
+}
+
+.input-with-icon input {
+    width: 100%;
+    height: 44px;
+    padding-left: 40px;
+    padding-right: 14px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--color-black);
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.input-with-icon input::placeholder {
+    color: var(--color-gray-400);
+}
+
+.input-with-icon input:focus {
+    border-color: var(--color-black);
+    box-shadow: 0 0 0 1px var(--color-black);
+}
+
+.contact-textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--color-black);
+    outline: none;
+    transition: all 0.2s ease;
+    resize: vertical;
+}
+
+.contact-textarea::placeholder {
+    color: var(--color-gray-400);
+}
+
+.contact-textarea:focus {
+    border-color: var(--color-black);
+    box-shadow: 0 0 0 1px var(--color-black);
+}
+
+.btn-send-message {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.btn-send-message:hover {
+    background-color: #333;
+}
+/* Refactored Classes from contact.html */
+.contact-page-wrapper {
+    background-color: var(--color-bg);
+    padding: 60px 20px;
+}
+.contact-container {
+    max-width: 1200px;
+}
+.contact-card {
+    background: var(--color-white);
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.contact-heading {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-family: 'Inter', sans-serif;
+}
+.contact-subtext {
+    color: var(--color-gray-600);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+.contact-icon {
+    font-size: 20px;
+    width: 24px;
+    text-align: center;
+}
+.contact-detail-text {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-black);
+}
+.map-placeholder {
+    width: 100%;
+    height: 250px;
+    background-color: #f1f3f5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #dee2e6;
+    color: #adb5bd;
+}
+
+/* Icon Colors */
+.icon-green { color: #34C759 !important; }
+.icon-blue { color: #007AFF !important; }
+.icon-red { color: #FF3B30 !important; }
+.icon-orange { color: #FF9500 !important; }
+.icon-purple { color: #5856D6 !important; }
+.icon-teal { color: #00C7BE !important; }
+
+/* Responsive tweaks for Contact Card */
+@media (max-width: 991px) {
+    .contact-card {
+        padding: 24px;
+    }
+}

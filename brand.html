@@ -1,107 +1,209 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Brands - Men's Wear</title>
 
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/pages.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/luxury-global.css">
+
+
+    <!-- Custom CSS Architecture -->
+
+    <link rel="stylesheet" href="css/main.css">
+
 </head>
+
+
 
 <body>
 
+
+
     <div id="header"></div>
 
+
+
     <main>
+
         <section class="luxury-hero">
+
             <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+
                 <!-- Indicators -->
+
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Gucci"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Calvin Klein"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Adidas"></button>
+
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Gucci"></button>
+
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"
+                        aria-label="Calvin Klein"></button>
+
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"
+                        aria-label="Adidas"></button>
+
                 </div>
+
+
 
                 <div class="carousel-inner">
+
                     <!-- Slide 1: Gucci -->
-                    <div class="carousel-item active hero-slide" style="background-image: url('assets/images/brand/gucci3.png')">
+
+                    <div class="carousel-item active hero-slide"
+                        style="background-image: url('assets/images/brand/gucci3.png')">
+
                         <div class="hero-overlay"></div>
+
                         <div class="hero-content">
+
                             <h1>THE MAISONS</h1>
+
                             <p>Discover our curated selection of the world's most prestigious fashion houses.</p>
+
                         </div>
+
                     </div>
-                    
+
+
+
                     <!-- Slide 2: Calvin Klein -->
+
                     <div class="carousel-item hero-slide" style="background-image: url('assets/images/brand/ck.png')">
+
                         <div class="hero-overlay"></div>
+
                         <div class="hero-content">
+
                             <h1>MODERN ELEGANCE</h1>
+
                             <p>Explore the timeless designs of Calvin Klein.</p>
+
                         </div>
+
                     </div>
+
+
 
                     <!-- Slide 3: Adidas -->
-                    <div class="carousel-item hero-slide" style="background-image: url('assets/images/brand/adidas.jpg')">
+
+                    <div class="carousel-item hero-slide"
+                        style="background-image: url('assets/images/brand/adidas.jpg')">
+
                         <div class="hero-overlay"></div>
+
                         <div class="hero-content">
+
                             <h1>URBAN STREETWEAR</h1>
+
                             <p>Performance meets lifestyle with Adidas original collections.</p>
+
                         </div>
+
                     </div>
+
                 </div>
+
+
 
                 <!-- Controls -->
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+
                     <span class="visually-hidden">Previous</span>
+
                 </button>
+
                 <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+
                     <span class="visually-hidden">Next</span>
+
                 </button>
+
             </div>
+
         </section>
+
+
 
         <section class="brand-page" style="padding-top: 80px;">
+
             <div class="container" id="featuredBrands">
+
                 <!-- Featured Brands will be injected here -->
+
             </div>
-            
+
+
+
             <div class="container mt-5 pt-5">
+
                 <div class="section-header text-center mb-4">
+
                     <h2 class="luxury-heading">Explore All Brands</h2>
+
                 </div>
-                
+
+
+
                 <!-- VIP Brand Categories Filters -->
+
                 <div class="brand-filters text-center mb-5">
+
                     <button class="filter-btn active" data-filter="all">All Houses</button>
+
                     <button class="filter-btn" data-filter="luxury">Luxury</button>
+
                     <button class="filter-btn" data-filter="sport">Sport</button>
+
                     <button class="filter-btn" data-filter="casual">Casual</button>
+
                 </div>
+
+
 
                 <div id="brandList" class="row"></div>
+
             </div>
+
         </section>
+
     </main>
 
-    <div id="footer"></div>
 
+
+    <div id="footer"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+
+
     <script src="js/components.js"></script>
+
     <script type="module" src="js/main.js"></script>
 
+
+
     <script type="module" src="js/brand.js"></script>
+
 </body>
+
+
 
 </html>

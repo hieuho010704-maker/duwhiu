@@ -36,7 +36,9 @@ export function getOrderById(orderId) {
 
 export function getWishlist() {
     try {
-        return JSON.parse(localStorage.getItem('wishlist')) || [];
+        const stored = JSON.parse(localStorage.getItem('wishlist')) || [];
+        // Map any strings to numbers for backward compatibility
+        return stored.map(id => parseInt(id, 10)).filter(id => !isNaN(id));
     } catch {
         return [];
     }
@@ -44,15 +46,18 @@ export function getWishlist() {
 
 export function toggleWishlist(productId) {
     let wishlist = getWishlist();
-    const index = wishlist.indexOf(productId);
+    const idNum = parseInt(productId, 10);
+    const index = wishlist.indexOf(idNum);
+    
     if (index > -1) wishlist.splice(index, 1);
-    else wishlist.push(productId);
+    else wishlist.push(idNum);
+    
     localStorage.setItem('wishlist', JSON.stringify(wishlist));
     return wishlist;
 }
 
 export function isInWishlist(productId) {
-    return getWishlist().includes(productId);
+    return getWishlist().includes(parseInt(productId, 10));
 }
 
 export function getUsers() {
